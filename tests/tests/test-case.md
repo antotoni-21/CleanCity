@@ -18,9 +18,10 @@ Account is created, user is assigned "User" role, and redirected or shown succes
 - **FR:** FR-001, FR-003
 
 **TC-002 – Register with invalid email format**
--**Steps:** Enter user@ in the email field
--**Expected Result:** "Invalid email format" error is displayed
-FR: FR-002
+- **Steps:** 
+  1. Enter user@ in the email field
+- **Expected Result:** "Invalid email format" error is displayed
+- **FR:** FR-002
 
 **TC-003 – Register with short password**
 - **Steps:**
