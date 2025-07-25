@@ -550,121 +550,195 @@ Data includes:
 **Requirement ID:** FR-030  
 
 
-📝 6.1 Blog System
-TC-050 – Display list of blog articles
-Precondition: At least one blog post exists
-Steps:
-Navigate to the “Blog” page
-Expected Result: Blog posts are displayed with titles, preview text, and links
-FR: General
+## 📝 6.1 Blog System
 
-TC-051 – Read a full blog article
-Steps:
-Click on a blog post from the list
-Expected Result: Full content of the blog article is displayed
-FR: General
+---
 
-TC-052 – Like or bookmark a blog post (if applicable)
-Steps:
-Open a blog post
-Click "Like" or "Bookmark" (if implemented)
-Expected Result: Action is recorded and UI updates accordingly
-FR: "Users should be able to interact with blog content"
+### ✅ TC-050 – Display list of blog articles  
+**Precondition:** At least one blog post exists  
+**Steps:**  
+1. Navigate to the “Blog” page  
 
-TC-053 – Admin can create, edit, and delete blog posts
-Precondition: Admin user logged in
-Steps:
-Navigate to blog admin panel
-Create a post with title, body, tags
-Edit it
-Delete it
-Expected Result: CRUD operations complete successfully
-FR: "Users/admins should manage blog posts"
+**Expected Result:**  
+Blog posts are displayed with titles, preview text, and links  
 
-TC-054 – Blog supports categories and tags
-Steps:
-View blog post details or filter list by category/tag
-Expected Result: Posts are grouped or filterable by categories or tags
-FR: "Blog may support categories or tags"
+**Requirement ID:** General  
 
-🌱 6.2 Awareness Section
-TC-055 – Eco tips rotate every 5 seconds
-Steps:
-Go to Awareness section
-Observe tip content
-Expected Result: A new eco tip appears every 5 seconds without page refresh
-FR: FR-036
+---
 
-TC-056 – View environmental quizzes
-Steps:
-Click on "Take Quiz" in Awareness section
-Expected Result: Quiz page loads with question and answer options
-FR: FR-037
+### ✅ TC-051 – Read a full blog article  
+**Steps:**  
+1. Click on a blog post from the list  
 
-TC-057 – Submit quiz and view score
-Steps:
-Answer all quiz questions
-Submit the quiz
-Expected Result: Final score is shown along with correct answers and explanations
-FR: FR-038
+**Expected Result:**  
+Full content of the blog article is displayed  
 
-TC-058 – Track quiz score in user history
-Precondition: User is logged in and has taken quizzes
-Steps:
-Go to profile or quiz history
-Expected Result: Previous quiz attempts and scores are displayed
-FR: FR-038
+**Requirement ID:** General  
 
-TC-059 – Display infographics with environmental statistics
-Steps:
-Open the Awareness section
-Expected Result: Charts/graphics showing recycling rates, CO₂ impact, etc., are displayed
-FR: FR-039
+---
 
-TC-060 – Action buttons in Awareness section work
-Steps:
-Click buttons like “Learn More”, “Join Campaign”, or “Schedule Pickup”
-Expected Result: Navigates to the correct feature or section
-FR: FR-040
+### ✅ TC-052 – Like or bookmark a blog post (if applicable)  
+**Steps:**  
+1. Open a blog post  
+2. Click "Like" or "Bookmark" (if implemented)  
 
-👥 6.3 Community Feed
-TC-061 – User creates a community post
-Precondition: User is logged in
-Steps:
-Go to Community section
-Click “New Post”
-Enter text and submit
-Expected Result: Post is displayed at the top of the feed
-FR: FR-041
+**Expected Result:**  
+Action is recorded and UI updates accordingly  
 
-TC-062 – User likes and comments on post
-Steps:
-Open a community post
-Click “Like” and leave a comment
-Expected Result: Like counter increases, comment appears under post
-FR: FR-042
+**Requirement ID:** Users should be able to interact with blog content  
 
-TC-063 – Posts display in chronological order
-Steps:
-View community feed
-Expected Result: Newest posts appear first
-FR: FR-043
+---
 
-TC-064 – User shares eco tips or experiences
-Steps:
-Create a post with eco tip or experience story
-Expected Result: Post is added to feed and visible to community
-FR: FR-044
+### ✅ TC-053 – Admin can create, edit, and delete blog posts  
+**Precondition:** Admin user logged in  
+**Steps:**  
+1. Navigate to blog admin panel  
+2. Create a post with title, body, tags  
+3. Edit it  
+4. Delete it  
+
+**Expected Result:**  
+CRUD operations complete successfully  
+
+**Requirement ID:** Users/admins should manage blog posts  
+
+---
+
+### ✅ TC-054 – Blog supports categories and tags  
+**Steps:**  
+1. View blog post details or filter list by category/tag  
+
+**Expected Result:**  
+Posts are grouped or filterable by categories or tags  
+
+**Requirement ID:** Blog may support categories or tags  
+
+---
+
+## 🌱 6.2 Awareness Section
+
+---
+
+### ✅ TC-055 – Eco tips rotate every 5 seconds  
+**Steps:**  
+1. Go to Awareness section  
+2. Observe tip content  
+
+**Expected Result:**  
+A new eco tip appears every 5 seconds without page refresh  
+
+**Requirement ID:** FR-036  
+
+---
+
+### ✅ TC-056 – View environmental quizzes  
+**Steps:**  
+1. Click on "Take Quiz" in Awareness section  
+
+**Expected Result:**  
+Quiz page loads with question and answer options  
+
+**Requirement ID:** FR-037  
+
+---
+
+### ✅ TC-057 – Submit quiz and view score  
+**Steps:**  
+1. Answer all quiz questions  
+2. Submit the quiz  
+
+**Expected Result:**  
+Final score is shown along with correct answers and explanations  
+
+**Requirement ID:** FR-038  
+
+---
+
+### ✅ TC-058 – Track quiz score in user history  
+**Precondition:** User is logged in and has taken quizzes  
+**Steps:**  
+1. Go to profile or quiz history  
+
+**Expected Result:**  
+Previous quiz attempts and scores are displayed  
+
+**Requirement ID:** FR-038  
+
+---
+
+### ✅ TC-059 – Display infographics with environmental statistics  
+**Steps:**  
+1. Open the Awareness section  
+
+**Expected Result:**  
+Charts/graphics showing recycling rates, CO₂ impact, etc., are displayed  
+
+**Requirement ID:** FR-039  
+
+---
+
+### ✅ TC-060 – Action buttons in Awareness section work  
+**Steps:**  
+1. Click buttons like “Learn More”, “Join Campaign”, or “Schedule Pickup”  
+
+**Expected Result:**  
+Navigates to the correct feature or section  
+
+**Requirement ID:** FR-040  
+
+---
+
+## 👥 6.3 Community Feed
+
+---
+
+### ✅ TC-061 – User creates a community post  
+**Precondition:** User is logged in  
+**Steps:**  
+1. Go to Community section  
+2. Click “New Post”  
+3. Enter text and submit  
+
+**Expected Result:**  
+Post is displayed at the top of the feed  
+
+**Requirement ID:** FR-041  
+
+---
+
+### ✅ TC-062 – User likes and comments on post  
+**Steps:**  
+1. Open a community post  
+2. Click “Like” and leave a comment  
+
+**Expected Result:**  
+Like counter increases, comment appears under post  
+
+**Requirement ID:** FR-042  
+
+---
+
+### ✅ TC-063 – Posts display in chronological order  
+**Steps:**  
+1. View community feed  
+
+**Expected Result:**  
+Newest posts appear first  
+
+**Requirement ID:** FR-043  
+
+---
+
+### ✅ TC-064 – User shares eco tips or experiences  
+**Steps:**  
+1. Create a post with eco tip or experience story  
+
+**Expected Result:**  
+Post is added to feed and visible to community  
+
+**Requirement ID:** FR-044  
 
 
-
-Here are clear, structured, and actionable test cases for your Community Features Requirements (User Profiles & Social Features — FR-045 to FR-052). These are ideal for:
-Manual QA testing
-Automation scripts
-Creating GitHub Issues or Kanban cards for test tracking
-
-✅ Test Case Format
-| TC ID | Title | Precondition | Test Steps | Expected Result | FR ID |
 
 👥 7.1 User Profiles
 
