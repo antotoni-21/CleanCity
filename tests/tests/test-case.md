@@ -1,4 +1,4 @@
-CleanCity test cases.
+#CleanCity: Waste Pickup Scheduler-Test Cases
 
 
 Here are well-structured test cases based on the provided Authentication System Requirements (FR-001 to FR-011). The format is suitable for manual testing and can be adapted into automation suites or GitHub Projects.
