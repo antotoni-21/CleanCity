@@ -4,7 +4,7 @@
 
 ## 🔐 3.1 User Registration
 
-**TC-001 – Register with valid information**
+### TC-001 – Register with valid information
 - **Precondition:** User is on the registration page
 - **Steps:**
   1. Enter valid email: user@example.com
@@ -17,94 +17,121 @@
 Account is created, user is assigned "User" role, and redirected or shown success message
 - **FR:** FR-001, FR-003
 
-**TC-002 – Register with invalid email format**
+
+### TC-002 – Register with invalid email format
 - **Steps:** 
   1. Enter user@ in the email field
 - **Expected Result:** "Invalid email format" error is displayed
 - **FR:** FR-002
 
-**TC-003 – Register with short password**
+
+### TC-003 – Register with short password
 - **Steps:**
   1. Enter password less than 8 characters (e.g., Test1)
 - **Expected Result:** "Password must be at least 8 characters" error is shown
 - **FR:** FR-002
 
-TC-004 – Register with mismatched confirm password
-Steps: Password: Test@1234, Confirm password: Test@123
-Expected Result: "Passwords do not match" error message
-FR: FR-002
 
-TC-005 – Register with full name less than 2 characters
-Steps: Enter full name: A
-Expected Result: "Full name must be between 2 and 50 characters"
-FR: FR-002
-
-TC-006 – Register with invalid phone number
-Steps: Phone: abc123
-Expected Result: "Invalid phone number"
-FR: FR-002
-
-🔑 3.2 User Login
-TC-007 – Login with valid credentials
-Precondition: User is registered
-Steps:
-Enter email: user@example.com
-Enter password: Test@1234
-Click "Login"
-Expected Result: User is logged in and redirected to intended page; session saved in localStorage
-FR: FR-004, FR-006, FR-007
-
-TC-008 – Login with incorrect password
-Steps: Enter valid email, wrong password
-Expected Result: "Invalid credentials" message
-FR: FR-005
-
-TC-009 – Login with unregistered email
-Steps: Email not in system
-Expected Result: "Email not found" or generic error
-FR: FR-005
-
-TC-010 – Check localStorage on successful login
-Steps:
-Login successfully
-Open browser developer tools
-Expected Result: User session token or identifier is present in localStorage
-FR: FR-006
-
-TC-011 – Redirect to intended page after login
-Steps:
-Try accessing /profile while logged out
-Login when prompted
-Expected Result: Redirected to /profile after login
-FR: FR-007
-
-🚪 3.3 User Logout
-TC-012 – User logs out successfully
-Steps: Click "Logout"
-Expected Result: Session is cleared, user redirected to login page
-FR: FR-008, FR-009
-
-🛡️ 3.4 Role-Based Access
-TC-013 – User role restricted from admin page
-Precondition: Logged in as "User"
-Steps: Navigate to /admin
-Expected Result: Access denied or redirect to a "403 Forbidden" or home page
-FR: FR-011
-
-TC-014 – Admin accesses admin-only features
-Precondition: Logged in as "Admin"
-Steps: Navigate to /admin
-Expected Result: Admin dashboard loads successfully
-FR: FR-010, FR-011
-
-TC-015 – New user has default role "User"
-Steps: Register a new account
-Expected Result: Account role is "User" by default (can be checked in API or user panel)
-FR: FR-003, FR-010
+### TC-004 – Register with mismatched confirm password
+- **Steps:**
+  1. Password:Test@1234,
+  2.  Confirm password: Test@123
+- **Expected Result:** "Passwords do not match" error message
+- **FR:** FR-002
 
 
+### TC-005 – Register with full name less than 2 characters
+- **Steps:**
+  1. Enter full name: A
+- **Expected Result:** "Full name must be between 2 and 50 characters"
+- **FR:** FR-002
 
-Below are detailed test cases for your Waste Management System based on the functional requirements FR-012 to FR-022. These follow a clear, actionable format and are suitable for manual testing, automation, or adding to GitHub Projects (as described earlier).
+
+### TC-006 – Register with invalid phone number
+- **Steps:**
+  1. Phone: abc123
+- **Expected Result:** "Invalid phone number"
+- **FR:** FR-002
+
+
+## 🔑 3.2 User Login
+
+
+### TC-007 – Login with valid credentials
+- **Precondition:** User is registered
+- **Steps:**
+  1. Enter email: user@example.com
+  2. Enter password: Test@1234
+  3. Click "Login"
+- **Expected Result:** User is logged in and redirected to intended page; session saved in localStorage
+- **FR:** FR-004, FR-006, FR-007
+
+
+### TC-008 – Login with incorrect password
+- **Steps:**
+  1. Enter valid email,
+  2. wrong password
+- **Expected Result:** "Invalid credentials" message
+- **FR:** FR-005
+
+
+### TC-009 – Login with unregistered email
+- **Steps:**
+  1. Email not in system
+- **Expected Result:** "Email not found" or generic error
+- **FR:** FR-005
+
+
+### TC-010 – Check localStorage on successful login
+- **Steps:**
+  1. Login successfully
+  2. Open browser developer tools
+- **Expected Result:** User session token or identifier is present in localStorage
+- **FR:** FR-006
+
+
+### TC-011 – Redirect to intended page after login
+- **Steps:**
+  1. Try accessing /profile while logged out
+  2. Login when prompted
+- **Expected Result:** Redirected to /profile after login
+- **FR:** FR-007
+
+
+## 🚪 3.3 User Logout
+
+
+### TC-012 – User logs out successfully
+- **Steps:**
+  1. Click "Logout"
+- **Expected Result:** Session is cleared, user redirected to login page
+- **FR:** FR-008, FR-009
+
+
+## 🛡️ 3.4 Role-Based Access
+
+
+### TC-013 – User role restricted from admin page
+- **Precondition:** Logged in as "User"
+- **Steps:**
+  1.  Navigate to /admin
+- **Expected Result:** Access denied or redirect to a "403 Forbidden" or home page
+- **FR:** FR-011
+
+### TC-014 – Admin accesses admin-only features
+- **Precondition:** Logged in as "Admin"
+- **Steps:**
+ 1. Navigate to /admin
+- **Expected Result:** Admin dashboard loads successfully
+- **FR:** FR-010, FR-011
+
+### TC-015 – New user has default role "User"
+- **Steps:**
+  1.  Register a new account
+- **Expected Result:** Account role is "User" by default (can be checked in API or user panel)
+- **FR:** FR-003, FR-010
+
+
 
 
 ✅ Test Case Table Format
