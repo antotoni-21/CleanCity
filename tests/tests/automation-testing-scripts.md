@@ -1,42 +1,83 @@
 # 🤖 Automated Test Scripts
 
-This document outlines the automated test cases implemented for the application using [your test framework/tool here].
+Generated on **2025-07-25**
+
+This document contains automated test scripts based on the system functional requirements.
 
 ---
 
-## ✅ Test Case: TC-201 – Login with Valid Credentials
+## 📂 3.1 User Registration
+
+### ✅ Test Case: TC-A001 – Register with valid information
 
 - **Framework**: Cypress
-- **Test File**: `tests/auth/login_valid.cy.js`
-- **Test Suite**: Authentication
-- **Priority**: High
-- **Tags**: @smoke @login
+- **Test File**: `tests/auth/register_valid.cy.js`
+- **Related FR(s)**: FR-001, FR-003
 
-### 🧪 Description
-Verifies that users can log in successfully using valid credentials.
+#### 🧪 Description
+Test user registration with all valid fields.
 
-### 📄 Preconditions
-- Valid user credentials exist in the system.
+---
 
-### 🚶 Test Steps
-1. Visit `/login`
-2. Enter valid email and password
-3. Click "Login"
+### ✅ Test Case: TC-A002 – Invalid email format
 
-### ✅ Expected Result
-- Redirect to dashboard (`/dashboard`)
-- Welcome message should be visible
+- **Framework**: Cypress
+- **Test File**: `tests/auth/register_invalid_email.cy.js`
+- **Related FR(s)**: FR-002
 
-### 🧰 Code Snippet
-```javascript
-describe('Login with valid credentials', () => {
-  it('should redirect to dashboard after login', () => {
-    cy.visit('/login');
-    cy.get('#email').type('user@example.com');
-    cy.get('#password').type('Password123!');
-    cy.get('button[type="submit"]').click();
-    cy.url().should('include', '/dashboard');
-    cy.contains('Welcome,').should('be.visible');
-  });
-});
+#### 🧪 Description
+Verify error message for invalid email format during registration.
+
+---
+
+## 📂 3.2 User Login
+
+### ✅ Test Case: TC-B001 – Login with correct credentials
+
+- **Framework**: Playwright
+- **Test File**: `tests/auth/login_success.spec.ts`
+- **Related FR(s)**: FR-004, FR-007
+
+#### 🧪 Description
+Check if users can login and are redirected to intended page.
+
+---
+
+### ✅ Test Case: TC-B002 – Login with wrong password
+
+- **Framework**: Playwright
+- **Test File**: `tests/auth/login_invalid_password.spec.ts`
+- **Related FR(s)**: FR-005
+
+#### 🧪 Description
+Ensure error message is displayed for wrong credentials.
+
+---
+
+## 📂 4.1 Pickup Scheduling
+
+### ✅ Test Case: TC-C001 – Schedule valid pickup
+
+- **Framework**: Cypress
+- **Test File**: `tests/pickup/schedule_valid.cy.js`
+- **Related FR(s)**: FR-012, FR-013
+
+#### 🧪 Description
+Test scheduling pickup with valid inputs 3 days in advance.
+
+---
+
+### ✅ Test Case: TC-C002 – Attempt pickup within 24 hours
+
+- **Framework**: Cypress
+- **Test File**: `tests/pickup/schedule_too_soon.cy.js`
+- **Related FR(s)**: FR-013
+
+#### 🧪 Description
+Ensure error is shown when pickup is scheduled within 24 hours.
+
+---
+
+
+
 
