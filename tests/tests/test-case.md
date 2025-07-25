@@ -132,43 +132,61 @@ Account is created, user is assigned "User" role, and redirected or shown succes
 - **FR:** FR-003, FR-010
 
 
-♻️ 4.1 Pickup Scheduling
-TC-016 – Schedule pickup with valid information
-Precondition: User is logged in
-Steps:
-Navigate to the pickup scheduling form
-Select a date 3 days from today
-Select waste type: “Recyclable”
-Select quantity: “Medium”
-Enter special instructions: “Place bags near garage”
-Submit request
-Expected Result: Pickup request is successfully submitted and shown in request history
-FR: FR-012
+## ♻️ 4.1 Pickup Scheduling
 
-TC-017 – Pickup date is in the past
-Steps: Enter a date that is today or earlier
-Expected Result: Error message: “Pickup date must be at least 24 hours in advance”
-FR: FR-013
+---
 
-TC-018 – Pickup date is less than 24 hours away
-Steps: Select a date/time 10 hours from now
-Expected Result: Error message preventing scheduling
-FR: FR-013
+### ✅ TC-016 – Schedule pickup with valid information  
+**Precondition:** User is logged in  
+**Steps:**  
+1. Navigate to the pickup scheduling form  
+2. Select a date 3 days from today  
+3. Select waste type: “Recyclable”  
+4. Select quantity: “Medium”  
+5. Enter special instructions: “Place bags near garage”  
+6. Submit request  
+**Expected Result:** Pickup request is successfully submitted and shown in request history  
+**FR:** FR-012  
 
-TC-019 – Missing required fields (waste type, quantity)
-Steps: Leave waste type and quantity blank
-Expected Result: Error: “Waste type and quantity are required”
-FR: FR-012
+---
 
-TC-020 – Special instructions exceed 200 characters
-Steps: Enter a 250-character note in special instructions
-Expected Result: Error: “Maximum 200 characters allowed”
-FR: FR-012
+### ❌ TC-017 – Pickup date is in the past  
+**Steps:**  
+1. Enter a date that is today or earlier  
+**Expected Result:** Error message: “Pickup date must be at least 24 hours in advance”  
+**FR:** FR-013  
 
-TC-021 – Address auto-filled from profile
-Steps: Open scheduling form
-Expected Result: Address field is pre-populated with user’s profile address
-FR: FR-012
+---
+
+### ❌ TC-018 – Pickup date is less than 24 hours away  
+**Steps:**  
+1. Select a date/time 10 hours from now  
+**Expected Result:** Error message preventing scheduling  
+**FR:** FR-013  
+
+---
+
+### ❌ TC-019 – Missing required fields (waste type, quantity)  
+**Steps:**  
+1. Leave waste type and quantity blank  
+**Expected Result:** Error: “Waste type and quantity are required”  
+**FR:** FR-012  
+
+---
+
+### ❌ TC-020 – Special instructions exceed 200 characters  
+**Steps:**  
+1. Enter a 250-character note in special instructions  
+**Expected Result:** Error: “Maximum 200 characters allowed”  
+**FR:** FR-012  
+
+---
+
+### ✅ TC-021 – Address auto-filled from profile  
+**Steps:**  
+1. Open scheduling form  
+**Expected Result:** Address field is pre-populated with user’s profile address  
+**FR:** FR-012  
 
 TC-022 – View available time slots
 Steps: Select a valid future date
