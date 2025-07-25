@@ -7,12 +7,12 @@
 **TC-001 – Register with valid information**
 - **Precondition:** User is on the registration page
 - **Steps:**
- 1. Enter valid email: user@example.com
- 2. Enter password: Test@1234
- 3. Enter confirm password: Test@1234
- 4. Enter full name: John Doe
- 5. Enter phone number: +1234567890
- 6. Click "Register"
+  1. Enter valid email: user@example.com
+  2. Enter password: Test@1234
+  3. Enter confirm password: Test@1234
+  4. Enter full name: John Doe
+  5. Enter phone number: +1234567890
+  6. Click "Register"
 - **Expected Result:**
 Account is created, user is assigned "User" role, and redirected or shown success message
 - **FR:** FR-001, FR-003
