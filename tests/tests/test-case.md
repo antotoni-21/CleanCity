@@ -739,114 +739,150 @@ Post is added to feed and visible to community
 **Requirement ID:** FR-044  
 
 
+## 👥 7.1 User Profiles
 
-👥 7.1 User Profiles
+---
 
-TC-065 – View user profile
-Precondition: User is logged in
-Steps:
-Navigate to /profile
-Expected Result:
-Profile page loads with name, bio, photo, statistics, and edit button
-FR: FR-045
+### ✅ TC-065 – View user profile  
+**Precondition:** User is logged in  
+**Steps:**  
+1. Navigate to `/profile`  
 
-TC-066 – Edit user profile information
-Steps:
-Click "Edit Profile"
-Modify name, phone, or bio
-Save changes
-Expected Result: Changes are saved and reflected immediately
-FR: FR-045
+**Expected Result:**  
+Profile page loads with name, bio, photo, statistics, and edit button  
 
-TC-067 – Upload or change profile picture
-Steps:
-Click on profile picture
-Upload new image
-Save
-Expected Result: Profile image updates successfully
-FR: FR-047
+**Requirement ID:** FR-045  
 
-TC-068 – Display user activity history
-Precondition: User has scheduled pickups, taken quizzes, or made posts
-Steps:
-View the "Activity" tab on profile
-Expected Result: List of past actions like pickups, posts, quiz results shown chronologically
-FR: FR-046
+---
 
-TC-069 – Display user achievements and badges
-Steps:
-Open profile page
-Scroll to “Achievements” section
-Expected Result: Badge icons and milestone titles are visible
-FR: FR-046
+### ✅ TC-066 – Edit user profile information  
+**Steps:**  
+1. Click "Edit Profile"  
+2. Modify name, phone, or bio  
+3. Save changes  
 
-TC-070 – Display environmental impact stats
-Steps:
-Visit the profile dashboard or statistics tab
-Expected Result:
-Stats such as total waste recycled, CO2 saved, trees saved are displayed
-FR: FR-048
+**Expected Result:**  
+Changes are saved and reflected immediately  
 
-🔗 7.2 Social Features
+**Requirement ID:** FR-045  
 
-TC-071 – Follow another user
-Precondition: Multiple users exist
-Steps:
-Visit another user's profile
-Click "Follow"
-Expected Result: Followed user is added to the following list, and button changes to “Unfollow”
-FR: FR-049
+---
 
-TC-072 – View news feed of followed users
-Steps:
-Navigate to “News Feed” section
-Expected Result: Shows activity of followed users (e.g., new posts, achievements, events joined)
-FR: FR-050
+### ✅ TC-067 – Upload or change profile picture  
+**Steps:**  
+1. Click on profile picture  
+2. Upload new image  
+3. Save  
 
-TC-073 – Share achievement to community feed
-Precondition: User unlocks a badge or milestone
-Steps:
-View achievement popup
-Click “Share to Community”
-Expected Result: A post appears in the community feed with badge and user comment (if any)
-FR: FR-051
+**Expected Result:**  
+Profile image updates successfully  
 
-TC-074 – Participate in community challenges
-Precondition: A challenge is active (e.g., “Recycle 10 kg in July”)
-Steps:
-Navigate to “Challenges”
-Join a challenge
-Complete qualifying action (e.g., schedule pickup)
-Expected Result:
-Participation is recorded
-Progress bar or badge updates accordingly
-FR: FR-052
+**Requirement ID:** FR-047  
 
-TC-075 – Join and view upcoming community events
-Steps:
-Navigate to “Events”
-Click “Join” on an event
-Expected Result:
-Event is added to user’s dashboard
-Reminders or countdown timer visible
-FR: FR-052
+---
 
-🧩 Optional: Mapping These to GitHub Projects
-You can use these as GitHub Issues or Project Cards with:
-Labels: feature:profile, feature:social, priority:high, type:test-case
-Status columns: To Do, In Progress, In Review, Passed, Failed
-Assignees: Your testers or developers
+### ✅ TC-068 – Display user activity history  
+**Precondition:** User has scheduled pickups, taken quizzes, or made posts  
+**Steps:**  
+1. View the "Activity" tab on profile  
 
+**Expected Result:**  
+List of past actions like pickups, posts, quiz results shown chronologically  
 
+**Requirement ID:** FR-046  
 
-Here are detailed, testable test cases for the Administrative Functions Requirements (⚙️ FR-053 to FR-064), covering:
-Request Management
-User Management
-Content Moderation
-These are formatted to be easily used in GitHub Projects (Kanban) or turned into GitHub Issues.
+---
 
-✅ Test Case Format
-| TC ID | Title | Precondition | Test Steps | Expected Result | FR ID |
+### ✅ TC-069 – Display user achievements and badges  
+**Steps:**  
+1. Open profile page  
+2. Scroll to “Achievements” section  
+
+**Expected Result:**  
+Badge icons and milestone titles are visible  
+
+**Requirement ID:** FR-046  
+
+---
+
+### ✅ TC-070 – Display environmental impact stats  
+**Steps:**  
+1. Visit the profile dashboard or statistics tab  
+
+**Expected Result:**  
+Stats such as total waste recycled, CO₂ saved, trees saved are displayed  
+
+**Requirement ID:** FR-048  
+
+---
+
+## 🔗 7.2 Social Features
+
+---
+
+### ✅ TC-071 – Follow another user  
+**Precondition:** Multiple users exist  
+**Steps:**  
+1. Visit another user's profile  
+2. Click "Follow"  
+
+**Expected Result:**  
+Followed user is added to the following list, and button changes to “Unfollow”  
+
+**Requirement ID:** FR-049  
+
+---
+
+### ✅ TC-072 – View news feed of followed users  
+**Steps:**  
+1. Navigate to “News Feed” section  
+
+**Expected Result:**  
+Shows activity of followed users (e.g., new posts, achievements, events joined)  
+
+**Requirement ID:** FR-050  
+
+---
+
+### ✅ TC-073 – Share achievement to community feed  
+**Precondition:** User unlocks a badge or milestone  
+**Steps:**  
+1. View achievement popup  
+2. Click “Share to Community”  
+
+**Expected Result:**  
+A post appears in the community feed with badge and user comment (if any)  
+
+**Requirement ID:** FR-051  
+
+---
+
+### ✅ TC-074 – Participate in community challenges  
+**Precondition:** A challenge is active (e.g., “Recycle 10 kg in July”)  
+**Steps:**  
+1. Navigate to “Challenges”  
+2. Join a challenge  
+3. Complete qualifying action (e.g., schedule pickup)  
+
+**Expected Result:**  
+Participation is recorded  
+Progress bar or badge updates accordingly  
+
+**Requirement ID:** FR-052  
+
+---
+
+### ✅ TC-075 – Join and view upcoming community events  
+**Steps:**  
+1. Navigate to “Events”  
+2. Click “Join” on an event  
+
+**Expected Result:**  
+Event is added to user’s dashboard  
+Reminders or countdown timer visible  
+
+**Requirement ID:** FR-052  
+
 
 🗂️ 8.1 Request Management
 
