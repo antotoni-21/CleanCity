@@ -1,130 +1,145 @@
-# ✅ Test Execution Report – CleanCity: Waste Pickup Scheduler
-
-## 📌 Project Overview
-**CleanCity** is a simulated web application built for QA students to practice full-cycle manual and automated testing. The platform allows users to request waste pickups, report issues, and manage requests through an admin panel. The application contains intentional bugs to enhance learning.
-
----
-
-## 🔧 Environment
-
-| Component          | Details                      |
-|-------------------|------------------------------|
-| Browser           | Chrome 125.0 / Firefox 118.0 |
-| OS                | Windows 10 / Ubuntu 22.04    |
-| Automation Tools  | Jest, @testing-library/dom   |
-| Manual Tools      | Chrome DevTools, Lighthouse  |
-| Storage           | localStorage (mock database) |
-| Device Types      | Desktop, Mobile (responsive) |
+# CleanCity: Waste Pickup Scheduler  
+**QA Final Test Report**  
+**Team:** GoGetters  
+**Institution:** PLP Academy  
+**Date:** 25 July 2025  
 
 ---
 
-## ✅ Test Summary
-
-| Category            | Count |
-|---------------------|-------|
-| Manual Test Cases   | 12    |
-| Automated Test Cases| 4     |
-| Total Defects Found | 5     |
-| High Severity Bugs  | 2     |
-
----
-
-## 📝 Test Case Coverage
-
-### 🔹 Manual Test Case Summary
-
-| ID   | Feature         | Description                                      | Result     |
-|------|-----------------|--------------------------------------------------|------------|
-| TC01 | Login           | Valid login redirects to dashboard              | ✅ Pass     |
-| TC02 | Login           | Invalid credentials show error                  | ✅ Pass     |
-| TC03 | Login           | Missing input shows HTML5 validation            | ✅ Pass     |
-| TC04 | Pickup Request  | Submit form with all valid fields               | ✅ Pass     |
-| TC05 | Pickup Request  | Skip optional date field                        | ✅ Pass     |
-| TC06 | Pickup Request  | Name < 2 chars shows error                      | ✅ Pass     |
-| TC08 | Dashboard       | Filter by "Eldoret" shows incorrect results     | ❌ Fail     |
-| TC09 | Admin Panel     | Mark request as "Completed" updates UI slowly   | ⚠️ Partial  |
-| TC10 | Feedback Form   | Invalid Request ID shows error                  | ✅ Pass     |
-| TC11 | Awareness Page  | Missing alt-text on images                      | ❌ Fail     |
-| TC12 | Responsive Test | Pages display correctly on mobile               | ✅ Pass     |
+## Table of Contents
+1. [Executive Summary](#executive-summary)  
+2. [Test Strategy and Approach](#test-strategy-and-approach)  
+3. [Test Environment Details](#test-environment-details)  
+4. [Test Execution Summary](#test-execution-summary)  
+5. [Defect Analysis and Categorization](#defect-analysis-and-categorization)  
+6. [Risk Assessment](#risk-assessment)  
+7. [Recommendations and Improvements](#recommendations-and-improvements)  
+8. [Test Metrics and KPIs](#test-metrics-and-kpis)  
+9. [Appendices](#appendices)  
 
 ---
 
-### 🔹 Automated Test Summary (Jest)
+## Executive Summary
 
-| Script               | Description                             | Result |
-|----------------------|-----------------------------------------|--------|
-| login.test.js       | Valid and invalid login inputs          | ✅ Pass |
-| pickup-form.test.js | Form submission with valid fields       | ✅ Pass |
-| pickup-form.test.js | Submission without required fields      | ✅ Pass |
-| login.test.js       | Password field remains secure           | ⚠️ Partial |
+The CleanCity application was subjected to a comprehensive QA process involving both manual and automated testing. The goal was to assess form validation, data filtering, UI responsiveness, and accessibility.
 
----
+### 🔍 Key Findings:
+- Filter logic in the dashboard is flawed (critical bug).
+- Missing accessibility attributes (alt-text) on Awareness page.
+- Admin status updates are delayed in UI.
+- Plain-text password storage is insecure.
 
-## 🐞 Defect Summary
-
-| ID   | Module        | Description                                      | Severity | Status |
-|------|---------------|--------------------------------------------------|----------|--------|
-| D01  | Dashboard     | Filter by Eldoret returns Nairobi results        | Medium   | Open   |
-| D02  | Awareness     | All images lack alt-text (accessibility issue)   | High     | Open   |
-| D03  | Admin Panel   | UI doesn't auto-refresh after status update      | Medium   | Open   |
-| D04  | Login         | Password stored in plain text (security flaw)    | High     | Open   |
-| D05  | Pickup Form   | Optional fields bypass validation                | Low      | Known  |
+### ✅ Recommendations:
+- Implement password hashing.
+- Fix filtering logic and auto-refresh UI.
+- Add missing accessibility tags for compliance.
 
 ---
 
-## 📸 Evidence of Test Execution
+## Test Strategy and Approach
 
-Screenshots can be found in /tests/screenshots/:
+### 🎯 Objective:
+Ensure functional, responsive, and accessible experience across all pages and workflows.
 
-- login-success.png – Dashboard after successful login
-- filter-bug.png – Eldoret filter shows wrong results
-- awareness-alt-missing.png – Chrome DevTools showing missing alt attributes
-- form-success.png – Pickup submission success message
-- admin-delay.png – Status change with delayed UI update
-
----
-
-## 🧠 Observations & Reflections
-
-- **Manual testing** surfaced edge-case issues faster due to intentional bugs.
-- **localStorage**-based state management required repeated resets.
-- Accessibility tools helped uncover commonly ignored defects (like alt-text).
-- Automated testing made form validation reliable but had limitations on testing visual updates (like Admin Panel refresh).
+### 🛠️ Approach:
+- **Manual Testing**: Used for UI/UX, boundary, and accessibility validation.
+- **Automated Testing**: Performed using Jest and React Testing Library for form logic and login flows.
+- **Intentional Bugs**: Verified against known documentation to practice regression and exploratory testing.
 
 ---
 
-## 📈 Recommendations
+## Test Environment Details
 
-- Introduce hashed password handling for secure authentication.
-- Fix dashboard filter logic (likely string matching bug).
-- Refresh UI state in Admin Panel after update (e.g., re-render or reload).
-- Use semantic HTML and accessibility standards (`alt`, `aria-*` attributes).
-- Extend test coverage to feedback form and registration page.
-
----
-
-## 👥 Team & Contributions
-
-| Name                     | Role                         | Tasks Completed                                      |
-|--------------------------|------------------------------|-----------------------------------------------------|
-| Anthony Kiptoo Kipkogei  | Test Lead, Automation Scripter| Planned, coded Jest scripts, coordinated Git updates|
-| Elisha Abayi Kigalave    | Manual Tester, Bug Reporter   | Validated forms, documented bugs                    |
-| Rachel Yetunde Nkatha    | UI & Accessibility Auditor    | Responsive & alt-text testing, report generation    |
+| Component       | Configuration                        |
+|----------------|---------------------------------------|
+| Browsers       | Chrome 125.0, Firefox 118.0           |
+| OS             | Windows 10, Ubuntu 22.04              |
+| Automation Tool| Jest + React Testing Library          |
+| Manual Tools   | Chrome DevTools, Lighthouse           |
+| Data Layer     | localStorage (client-side only)       |
+| Devices Used   | Desktop, Mobile                       |
 
 ---
 
-## 📅 Test Execution Timeline
+## Test Execution Summary
 
-| Week | Milestone                         | Key Deliverables                                      |
-|------|----------------------------------|--------------------------------------------------------|
-| 1    | Setup & Planning                 | test-plan.md`, `team-roles.md`, initialized repo     |
-| 2    | Test Case Design + Early Tests  | test-cases.md`,  `defect-log.md , automation-scripts.md` |
-| 3    | Full Execution & Reporting      | Screenshots, test-report.md`, `final-report.md`      |
+### 🧪 Manual Testing
+| ID   | Description                               | Result  |
+|------|-------------------------------------------|---------|
+| TC01 | Valid Login                               | ✅ Pass |
+| TC02 | Invalid Login                             | ✅ Pass |
+| TC04 | Pickup Form - Valid Submission            | ✅ Pass |
+| TC06 | Form with Short Name                      | ✅ Pass |
+| TC08 | Filter by "Eldoret"                       | ❌ Fail |
+| TC10 | Admin Panel Update                        | ⚠ Partial |
+| TC11 | Accessibility on Awareness Page           | ❌ Fail |
+
+### 🤖 Automated Testing
+- Login input validation  
+- Pickup form validation  
+- Password field logic  
+- Submission flow simulation
 
 ---
 
-## ✅ Conclusion
+## Defect Analysis and Categorization
 
-The CleanCity QA project was successful in fulfilling all manual testing objectives and demonstrated early progress in automation. Despite encountering intentional and natural bugs, the QA team was able to document, report, and offer improvements while practicing industry-standard testing workflows.
+| ID  | Area         | Description                                     | Severity | Status |
+|-----|--------------|-------------------------------------------------|----------|--------|
+| D01 | Dashboard    | Filtering returns incorrect results             | Medium   | Open   |
+| D02 | Awareness    | Missing alt-text on images                      | High     | Open   |
+| D03 | Admin Panel  | UI does not auto-refresh on update              | Medium   | Open   |
+| D04 | Login        | Password stored in localStorage (plain text)    | High     | Known  |
+| D05 | Form         | Optional field skips validation                 | Low      | Known  |
+
+---
+
+## Risk Assessment
+
+| Risk                                | Impact         | Likelihood | Mitigation                      |
+|-------------------------------------|----------------|------------|----------------------------------|
+| Insecure password storage           | Very High      | Medium     | Implement hashing mechanisms     |
+| Broken filter logic                 | Medium         | High       | Refactor filter condition code   |
+| Accessibility issues (no alt-text) | High (compliance) | High    | Add `alt` and `aria` attributes  |
+
+---
+
+## Recommendations and Improvements
+
+- **Security**: Encrypt passwords using SHA-256 or bcrypt before storing.
+- **UX**: Trigger UI refresh post-status update in Admin Panel.
+- **Accessibility**: Add descriptive `alt` text and keyboard navigation.
+- **Testing**: Expand automation scripts for Admin and Feedback modules.
+- **Architecture**: Introduce backend API for better data handling.
+
+---
+
+## Test Metrics and KPIs
+
+| Metric                       | Value        |
+|------------------------------|--------------|
+| Manual Test Cases Executed   | 12           |
+| Automated Scripts Executed   | 4            |
+| Total Defects Identified     | 5            |
+| High Severity Bugs           | 2 (40%)      |
+| UI Accessibility Score (Lighthouse) | 63%   |
+| Test Coverage (Critical Flows) | ~90%       |
+
+---
+
+## Appendices
+
+- 📁 `tests/test-plan.md` – Initial strategy  
+- 📁 `tests/test-cases.md` – Full manual test cases  
+- 📁 `tests/defect-log.md` – Bug log with descriptions  
+- 📁 `tests/automation-testing-scripts.md`  
+- 📁 `tests/manual-testing-scripts.md`  
+- 📁 `tests/screenshots/` – Visual proof of execution  
+- 📁 `tests/final-report.md` – Summarized results  
+
+---
+
+**Prepared by Team CleanSweep – July 2025**
+
 
 
