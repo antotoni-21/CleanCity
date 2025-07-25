@@ -7,25 +7,26 @@
 **TC-001 – Register with valid information**
 - **Precondition:** User is on the registration page
 - **Steps:**
-1. Enter valid email: user@example.com
-2. Enter password: Test@1234
-3. Enter confirm password: Test@1234
-4. Enter full name: John Doe
-5. Enter phone number: +1234567890
-6. Click "Register"
+ 1. Enter valid email: user@example.com
+ 2. Enter password: Test@1234
+ 3. Enter confirm password: Test@1234
+ 4. Enter full name: John Doe
+ 5. Enter phone number: +1234567890
+ 6. Click "Register"
 - **Expected Result:**
 Account is created, user is assigned "User" role, and redirected or shown success message
-**FR:** FR-001, FR-003
+- **FR:** FR-001, FR-003
 
-TC-002 – Register with invalid email format
-Steps: Enter user@ in the email field
-Expected Result: "Invalid email format" error is displayed
+**TC-002 – Register with invalid email format**
+-**Steps:** Enter user@ in the email field
+-**Expected Result:** "Invalid email format" error is displayed
 FR: FR-002
 
-TC-003 – Register with short password
-Steps: Enter password less than 8 characters (e.g., Test1)
-Expected Result: "Password must be at least 8 characters" error is shown
-FR: FR-002
+**TC-003 – Register with short password**
+- **Steps:**
+  1. Enter password less than 8 characters (e.g., Test1)
+- **Expected Result:** "Password must be at least 8 characters" error is shown
+- **FR:** FR-002
 
 TC-004 – Register with mismatched confirm password
 Steps: Password: Test@1234, Confirm password: Test@123
