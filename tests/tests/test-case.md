@@ -883,132 +883,191 @@ Reminders or countdown timer visible
 
 **Requirement ID:** FR-052  
 
+## 🗂️ 8.1 Request Management
 
-🗂️ 8.1 Request Management
+---
 
-TC-076 – View all pickup requests
-Precondition: Admin is logged in
-Steps:
-Navigate to “Admin > Pickup Requests”
-Expected Result: All user pickup requests are listed with status, date, type
-FR: FR-053
+### ✅ TC-076 – View all pickup requests  
+**Precondition:** Admin is logged in  
+**Steps:**  
+1. Navigate to “Admin > Pickup Requests”  
 
-TC-077 – Approve a pickup request
-Precondition: A request is in "Pending" status
-Steps:
-Click “Approve” button on a pending request
-Expected Result: Request status changes to "Confirmed"
-FR: FR-054
+**Expected Result:**  
+All user pickup requests are listed with status, date, type  
 
-TC-078 – Reject a pickup request
-Steps:
-Click “Reject” on a pending request
-Expected Result: Status changes to "Rejected", with optional rejection note
-FR: FR-054
+**Requirement ID:** FR-053  
 
-TC-079 – Modify a pickup request
-Steps:
-Edit waste type, date, or instructions
-Save changes
-Expected Result: Request updates successfully and new values appear in the list
-FR: FR-054
+---
 
-TC-080 – Assign pickup date and time
-Steps:
-Select a request
-Set a new pickup date and time
-Expected Result: Assigned time is reflected on the request and visible to the user
-FR: FR-055
+### ✅ TC-077 – Approve a pickup request  
+**Precondition:** A request is in "Pending" status  
+**Steps:**  
+1. Click “Approve” button on a pending request  
 
-TC-081 – Filter and search pickup requests
-Steps:
-Use filters like date range, status, user email
-Expected Result: Only matching requests are shown
-FR: FR-056
+**Expected Result:**  
+Request status changes to "Confirmed"  
 
-👤 8.2 User Management
+**Requirement ID:** FR-054  
 
-TC-082 – View all registered users
-Steps:
-Go to “Admin > Users”
-Expected Result: List of all users with names, emails, roles, and status
-FR: FR-057
+---
 
-TC-083 – Change a user’s role
-Steps:
-Select user
-Click “Change Role” and select “Admin” or “User”
-Expected Result: Role is updated and permission changes take effect
-FR: FR-058
+### ✅ TC-078 – Reject a pickup request  
+**Steps:**  
+1. Click “Reject” on a pending request  
 
-TC-084 – Suspend a user account
-Steps:
-Select user
-Click “Suspend”
-Expected Result: User cannot log in or access system until reactivated
-FR: FR-059
+**Expected Result:**  
+Status changes to "Rejected", with optional rejection note  
 
-TC-085 – Delete a user account
-Steps:
-Select user
-Click “Delete” and confirm
-Expected Result: User account is removed and cannot be recovered
-FR: FR-059
+**Requirement ID:** FR-054  
 
-TC-086 – View user activity report
-Steps:
-Go to a user’s detail view
-Open “Activity Report”
-Expected Result: Shows log of pickups, posts, quizzes, etc.
-FR: FR-060
+---
 
-📣 8.3 Content Moderation
+### ✅ TC-079 – Modify a pickup request  
+**Steps:**  
+1. Edit waste type, date, or instructions  
+2. Save changes  
 
-TC-087 – View all community posts and comments
-Steps:
-Go to “Admin > Community Content”
-Expected Result: All posts and comments are listed with user info and timestamps
-FR: FR-061
+**Expected Result:**  
+Request updates successfully and new values appear in the list  
 
-TC-088 – Delete inappropriate post or comment
-Steps:
-Select a flagged post
-Click “Delete”
-Expected Result: Post is removed from public view
-FR: FR-062
+**Requirement ID:** FR-054  
 
-TC-089 – View content flagged by users
-Steps:
-Go to “Flagged Content” section
-Expected Result: All flagged posts with reason and flag count are shown
-FR: FR-063
+---
 
-TC-090 – Create and publish announcement
-Steps:
-Navigate to “Announcements”
-Enter message and publish
-Expected Result: Announcement is shown to all users on dashboard or community feed
-FR: FR-064
+### ✅ TC-080 – Assign pickup date and time  
+**Steps:**  
+1. Select a request  
+2. Set a new pickup date and time  
 
-🧩 GitHub Projects Integration
-You can use these as cards with:
-Labels:
-type:test-case, module:admin, feature:request-mgmt, priority:high
-Kanban columns:
-To Do, In Progress, In Review, Passed, Failed
-Assignees:
-QA, Dev, Product roles
+**Expected Result:**  
+Assigned time is reflected on the request and visible to the user  
 
+**Requirement ID:** FR-055  
 
+---
 
-Here are detailed test cases for your Notification System Requirements (🔔 FR-065 to FR-068), written to fit cleanly into GitHub Projects, GitHub Issues, or any QA test management tool. These test cases cover:
-Notification bell display
-Event-driven notifications
-Read/unread functionality
-Notification history access
+### ✅ TC-081 – Filter and search pickup requests  
+**Steps:**  
+1. Use filters like date range, status, user email  
 
-✅ Test Case Format
-| TC ID | Title | Precondition | Test Steps | Expected Result | FR ID |
+**Expected Result:**  
+Only matching requests are shown  
+
+**Requirement ID:** FR-056  
+
+---
+
+## 👤 8.2 User Management
+
+---
+
+### ✅ TC-082 – View all registered users  
+**Steps:**  
+1. Go to “Admin > Users”  
+
+**Expected Result:**  
+List of all users with names, emails, roles, and status  
+
+**Requirement ID:** FR-057  
+
+---
+
+### ✅ TC-083 – Change a user’s role  
+**Steps:**  
+1. Select user  
+2. Click “Change Role” and select “Admin” or “User”  
+
+**Expected Result:**  
+Role is updated and permission changes take effect  
+
+**Requirement ID:** FR-058  
+
+---
+
+### ✅ TC-084 – Suspend a user account  
+**Steps:**  
+1. Select user  
+2. Click “Suspend”  
+
+**Expected Result:**  
+User cannot log in or access system until reactivated  
+
+**Requirement ID:** FR-059  
+
+---
+
+### ✅ TC-085 – Delete a user account  
+**Steps:**  
+1. Select user  
+2. Click “Delete” and confirm  
+
+**Expected Result:**  
+User account is removed and cannot be recovered  
+
+**Requirement ID:** FR-059  
+
+---
+
+### ✅ TC-086 – View user activity report  
+**Steps:**  
+1. Go to a user’s detail view  
+2. Open “Activity Report”  
+
+**Expected Result:**  
+Shows log of pickups, posts, quizzes, etc.  
+
+**Requirement ID:** FR-060  
+
+---
+
+## 📣 8.3 Content Moderation
+
+---
+
+### ✅ TC-087 – View all community posts and comments  
+**Steps:**  
+1. Go to “Admin > Community Content”  
+
+**Expected Result:**  
+All posts and comments are listed with user info and timestamps  
+
+**Requirement ID:** FR-061  
+
+---
+
+### ✅ TC-088 – Delete inappropriate post or comment  
+**Steps:**  
+1. Select a flagged post  
+2. Click “Delete”  
+
+**Expected Result:**  
+Post is removed from public view  
+
+**Requirement ID:** FR-062  
+
+---
+
+### ✅ TC-089 – View content flagged by users  
+**Steps:**  
+1. Go to “Flagged Content” section  
+
+**Expected Result:**  
+All flagged posts with reason and flag count are shown  
+
+**Requirement ID:** FR-063  
+
+---
+
+### ✅ TC-090 – Create and publish announcement  
+**Steps:**  
+1. Navigate to “Announcements”  
+2. Enter message and publish  
+
+**Expected Result:**  
+Announcement is shown to all users on dashboard or community feed  
+
+**Requirement ID:** FR-064  
+
 
 🔔 9. Notification System
 
