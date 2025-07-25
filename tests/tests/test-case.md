@@ -1173,100 +1173,156 @@ To integrate into GitHub Projects (Kanban):
   - `ui:dashboard`
 
 
-Here are detailed, professional-grade test cases for your User Interface Requirements (📱 FR-069 to FR-077), designed for integration into a QA process, GitHub Projects, or issue tracking systems.
+# 📱 10. User Interface Test Cases
 
-✅ Test Case Format
-| TC ID | Title | Precondition | Test Steps | Expected Result | FR ID |
+These test cases are designed for integration into QA workflows, GitHub Projects, or test management tools.
 
-📱 10.1 Responsive Design
+---
 
-TC-098 – Display UI correctly on desktop (1920x1080+)
-Precondition: User accesses the app on a desktop
-Steps:
-Open app on a device with 1920x1080 resolution
-Expected Result: Layout renders correctly with no UI overlap or broken components
-FR: FR-069
+## ✅ Test Case Format
 
-TC-099 – Display UI correctly on tablets (768px to 1024px)
-Steps:
-Resize browser or use tablet emulator
-Navigate through multiple pages
-Expected Result: UI elements adjust gracefully (responsive grids, readable text, no clipping)
-FR: FR-069
+| TC ID   | Title                                       | Precondition                             | Test Steps                                                                                 | Expected Result                                                                                  | FR ID     |
+|---------|---------------------------------------------|------------------------------------------|--------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|-----------|
 
-TC-100 – Display UI correctly on mobile devices (320px to 767px)
-Steps:
-Access app using a mobile browser (e.g., Chrome DevTools emulator or real device)
-Expected Result: Menu collapses into mobile nav, elements stack vertically, text is readable
-FR: FR-069
+---
 
-TC-101 – Functional parity across screen sizes
-Steps:
-Perform common actions (e.g., login, schedule pickup, view dashboard) on all screen sizes
-Expected Result: No feature is missing or broken due to screen size
-FR: FR-070
+## 📱 10.1 Responsive Design
 
-♿ 10.2 Accessibility
+### ✅ TC-098 – Display UI correctly on desktop (1920x1080+)
+**Precondition:** User accesses the app on a desktop  
+**Steps:**  
+1. Open app on a device with 1920x1080 resolution  
+**Expected Result:**  
+Layout renders correctly with no UI overlap or broken components  
+**FR:** FR-069  
 
-TC-102 – UI meets WCAG 2.1 AA contrast and readability
-Steps:
-Inspect UI elements using accessibility tools (e.g., axe, Lighthouse)
-Check contrast ratios, font sizes, element spacing
-Expected Result: All critical elements pass WCAG 2.1 AA criteria
-FR: FR-071
+---
 
-TC-103 – Navigate UI using only keyboard
-Steps:
-Use Tab, Enter, Space, and Arrow keys to navigate pages
-Attempt to activate links, buttons, and inputs
-Expected Result: All interactive elements are reachable and operable via keyboard
-FR: FR-072
+### ✅ TC-099 – Display UI correctly on tablets (768px to 1024px)
+**Steps:**  
+1. Resize browser or use tablet emulator  
+2. Navigate through multiple pages  
+**Expected Result:**  
+UI elements adjust gracefully (responsive grids, readable text, no clipping)  
+**FR:** FR-069  
 
-TC-104 – Verify alt text is present for all images
-Steps:
-Inspect all content images in the UI
-Check for alt attribute in the DOM
-Expected Result: All non-decorative images include meaningful alt text
-FR: FR-073
+---
 
-TC-105 – Verify screen reader compatibility
-Precondition: Screen reader software is active (e.g., NVDA, VoiceOver)
-Steps:
-Navigate through key screens using the screen reader
-Observe if labels, landmarks, and headings are properly read
-Expected Result: Screen reader reads UI logically and clearly
-FR: FR-074
+### ✅ TC-100 – Display UI correctly on mobile devices (320px to 767px)
+**Steps:**  
+1. Access app using a mobile browser (e.g., Chrome DevTools emulator or real device)  
+**Expected Result:**  
+Menu collapses into mobile nav, elements stack vertically, text is readable  
+**FR:** FR-069  
 
-🧭 10.3 Navigation
+---
 
-TC-106 – Display of primary navigation menu
-Steps:
-Access any page
-Look for top or side navigation menu
-Expected Result: Menu is consistently placed and shows key sections (Dashboard, Community, etc.)
-FR: FR-075
+### ✅ TC-101 – Functional parity across screen sizes
+**Steps:**  
+1. Perform common actions (e.g., login, schedule pickup, view dashboard) on all screen sizes  
+**Expected Result:**  
+No feature is missing or broken due to screen size  
+**FR:** FR-070  
 
-TC-107 – Show breadcrumbs on deep navigation paths
-Steps:
-Go to a nested page (e.g., Dashboard > Analytics > CO₂ Savings)
-Expected Result: Breadcrumbs are visible (e.g., "Home / Dashboard / Analytics")
-FR: FR-076
+---
 
-TC-108 – Verify search functionality presence
-Steps:
-Navigate to searchable section (e.g., blog, community feed)
-Use search input to query a keyword
-Expected Result: Relevant results are displayed; no crash or missing feature
-FR: FR-077
+## ♿ 10.2 Accessibility
 
-🧩 GitHub Projects (Kanban) Integration
-Each test case can be entered as a GitHub Issue or Project Task with:
-Labels:
-type:test-case
-feature:ui, feature:accessibility, feature:responsive
-priority:medium
-Project columns: To Do, In Progress, Passed, Failed
-Assignees: QA, Frontend Dev, Accessibility Lead
+### ✅ TC-102 – UI meets WCAG 2.1 AA contrast and readability
+**Steps:**  
+1. Inspect UI using tools (axe, Lighthouse)  
+2. Check contrast ratios, font sizes, spacing  
+**Expected Result:**  
+All critical elements pass WCAG 2.1 AA criteria  
+**FR:** FR-071  
+
+---
+
+### ✅ TC-103 – Navigate UI using only keyboard
+**Steps:**  
+1. Use Tab, Enter, Space, and Arrow keys  
+2. Attempt to activate all links, buttons, and inputs  
+**Expected Result:**  
+All interactive elements are reachable and operable via keyboard  
+**FR:** FR-072  
+
+---
+
+### ✅ TC-104 – Verify alt text is present for all images
+**Steps:**  
+1. Inspect all content images in the UI  
+2. Check for `alt` attribute in the DOM  
+**Expected Result:**  
+All non-decorative images include meaningful `alt` text  
+**FR:** FR-073  
+
+---
+
+### ✅ TC-105 – Verify screen reader compatibility
+**Precondition:** Screen reader software is active (e.g., NVDA, VoiceOver)  
+**Steps:**  
+1. Navigate through key screens using the screen reader  
+2. Observe if labels, landmarks, and headings are properly read  
+**Expected Result:**  
+Screen reader reads UI logically and clearly  
+**FR:** FR-074  
+
+---
+
+## 🧭 10.3 Navigation
+
+### ✅ TC-106 – Display of primary navigation menu
+**Steps:**  
+1. Access any page  
+2. Look for top or side navigation menu  
+**Expected Result:**  
+Menu is consistently placed and shows key sections (Dashboard, Community, etc.)  
+**FR:** FR-075  
+
+---
+
+### ✅ TC-107 – Show breadcrumbs on deep navigation paths
+**Steps:**  
+1. Go to a nested page (e.g., Dashboard > Analytics > CO₂ Savings)  
+**Expected Result:**  
+Breadcrumbs are visible (e.g., "Home / Dashboard / Analytics")  
+**FR:** FR-076  
+
+---
+
+### ✅ TC-108 – Verify search functionality presence
+**Steps:**  
+1. Navigate to searchable section (e.g., blog, community feed)  
+2. Use search input to query a keyword  
+**Expected Result:**  
+Relevant results are displayed; no crash or missing feature  
+**FR:** FR-077  
+
+---
+
+## 🧩 GitHub Projects (Kanban) Integration
+
+Each test case can be entered as a GitHub Issue or Project Task with the following:
+
+**Labels:**
+- `type:test-case`
+- `feature:ui`
+- `feature:accessibility`
+- `feature:responsive`
+- `priority:medium`
+
+**Columns:**
+- To Do
+- In Progress
+- Passed
+- Failed
+
+**Assignees:**
+- QA
+- Frontend Dev
+- Accessibility Lead
+
+
 
 
 
