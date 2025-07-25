@@ -1326,79 +1326,116 @@ Each test case can be entered as a GitHub Issue or Project Task with the followi
 
 
 
-Here are complete, well-structured test cases for your 🔒 Data Management Requirements (FR-078 to FR-083), formatted for QA workflows and ready to be integrated into GitHub Projects or any test management system.
+# 🔒 11. Data Management Test Cases
 
-✅ Test Case Format
-| TC ID | Title | Precondition | Test Steps | Expected Result | FR ID |
+Well-structured and QA-ready test cases for validating data storage, validation, and security. Suitable for GitHub Projects, Issues, or test management tools like TestRail or Zephyr.
 
-🔒 11.1 Data Persistence
+---
 
-TC-109 – Store user data in localStorage
-Precondition: User logs in or submits profile data
-Steps:
-Log in as a user
-Open DevTools > Application > localStorage
-Expected Result: localStorage contains keys for user session, profile, preferences, etc.
-FR: FR-078
+## ✅ Test Case Format
 
-TC-110 – Maintain data across browser sessions
-Precondition: User has previously logged in and data is stored
-Steps:
-Close browser completely
-Reopen browser and navigate to app
-Expected Result: User session or user-specific data persists; user is still logged in or sees their previous state
-FR: FR-079
+| TC ID   | Title                             | Precondition                                       | Test Steps                                                                                      | Expected Result                                                                                              | FR ID    |
+|---------|-----------------------------------|----------------------------------------------------|--------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|----------|
 
-TC-111 – Handle localStorage limit gracefully
-Precondition: localStorage usage is near browser limits (~5MB)
-Steps:
-Simulate or fill localStorage with large data
-Perform an action that writes to localStorage (e.g., save settings)
-Expected Result: System gracefully warns user or logs error, no data corruption or crash
-FR: FR-080
+---
 
-✅ 11.2 Data Validation
+## 🔒 11.1 Data Persistence
 
-TC-112 – Validate user input on form submit
-Precondition: User accesses a form (e.g., registration, pickup request)
-Steps:
-Leave required fields blank or enter invalid data
-Click submit
-Expected Result: Form shows appropriate error messages and does not submit
-FR: FR-081
+### ✅ TC-109 – Store user data in localStorage  
+**Precondition:** User logs in or submits profile data  
+**Steps:**  
+1. Log in as a user  
+2. Open DevTools → Application → localStorage  
+**Expected Result:**  
+localStorage contains keys for user session, profile, preferences, etc.  
+**FR:** FR-078  
 
-TC-113 – Prevent SQL Injection attacks
-Steps:
-Enter SQL strings like ' OR '1'='1 or DROP TABLE into input fields
-Submit the form
-Expected Result: Inputs are rejected or sanitized; no data leakage, error logs, or SQL behavior is triggered
-FR: FR-082
+---
 
-TC-114 – Prevent Cross-Site Scripting (XSS)
-Steps:
-Input malicious script: <script>alert("Hacked")</script> into a comment or bio field
-Submit and view it in the app
-Expected Result: Script is rendered harmless or escaped as text (not executed)
-FR: FR-082
+### ✅ TC-110 – Maintain data across browser sessions  
+**Precondition:** User has previously logged in and data is stored  
+**Steps:**  
+1. Close browser completely  
+2. Reopen browser and navigate to app  
+**Expected Result:**  
+User session or user-specific data persists; user is still logged in or sees their previous state  
+**FR:** FR-079  
 
-TC-115 – Sanitize user-generated content
-Steps:
-Enter special characters or markup (<b>, <img src=...>) into content submission fields
-Submit and view content on another page or profile
-Expected Result: Dangerous or non-allowed HTML is stripped or converted safely
-FR: FR-083
+---
 
-🧩 GitHub Projects Integration
-Each test case can be added as a GitHub Issue with:
-Labels:
-type:test-case
-feature:data-management
-priority:high (especially for FR-082/FR-083)
-security, validation, localstorage
-Status columns: To Do, In Progress, Passed, Failed
-Assignees: QA Engineer, Security Analyst, Frontend Dev
+### ✅ TC-111 – Handle localStorage limit gracefully  
+**Precondition:** localStorage usage is near browser limits (~5MB)  
+**Steps:**  
+1. Simulate or fill localStorage with large data  
+2. Perform an action that writes to localStorage (e.g., save settings)  
+**Expected Result:**  
+System gracefully warns user or logs error; no crash or data corruption occurs  
+**FR:** FR-080  
 
-Here are comprehensive and actionable test cases for your 🚀 Performance Requirements (FR-084 to FR-086), designed for manual QA, automation tools (like Lighthouse or Puppeteer), and GitHub Projects Kanban workflows.
+---
+
+## ✅ 11.2 Data Validation
+
+### ✅ TC-112 – Validate user input on form submit  
+**Precondition:** User accesses a form (e.g., registration, pickup request)  
+**Steps:**  
+1. Leave required fields blank or enter invalid data  
+2. Click submit  
+**Expected Result:**  
+Form shows appropriate error messages and does not submit  
+**FR:** FR-081  
+
+---
+
+### ✅ TC-113 – Prevent SQL Injection attacks  
+**Steps:**  
+1. Enter SQL strings like `' OR '1'='1` or `DROP TABLE` into input fields  
+2. Submit the form  
+**Expected Result:**  
+Inputs are rejected or sanitized; no data leakage, SQL behavior, or error logs triggered  
+**FR:** FR-082  
+
+---
+
+### ✅ TC-114 – Prevent Cross-Site Scripting (XSS)  
+**Steps:**  
+1. Input `<script>alert("Hacked")</script>` into a comment or bio field  
+2. Submit and view it in the app  
+**Expected Result:**  
+Script is rendered harmless or escaped as text (not executed)  
+**FR:** FR-082  
+
+---
+
+### ✅ TC-115 – Sanitize user-generated content  
+**Steps:**  
+1. Enter special characters or markup like `<b>`, `<img src=...>` into content fields  
+2. Submit and view content on another page or profile  
+**Expected Result:**  
+Dangerous or disallowed HTML is stripped, escaped, or safely rendered  
+**FR:** FR-083  
+
+---
+
+## 🧩 GitHub Projects Integration
+
+**Recommended Columns:**  
+- To Do  
+- In Progress  
+- Passed  
+- Failed  
+
+**Suggested Labels:**  
+- `type:test-case`  
+- `feature:data-management`  
+- `priority:high` (especially for FR-082, FR-083)  
+- `security`  
+- `validation`  
+- `localstorage`  
+
+**Assignees:** QA Engineer, Security Analyst, Frontend Dev  
+
+
 
 ✅ Test Case Format
 | TC ID | Title | Precondition | Test Steps | Expected Result | FR ID |
