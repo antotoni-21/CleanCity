@@ -1069,70 +1069,108 @@ Announcement is shown to all users on dashboard or community feed
 **Requirement ID:** FR-064  
 
 
-🔔 9. Notification System
 
-TC-091 – Display notification bell with unread count
-Precondition: User has at least one unread notification
-Steps:
-Login as user
-Look at the top navigation bar
-Expected Result: Notification bell icon displays total unread count (e.g., 🔔 3)
-FR: FR-065
+## 🔔 9. Notification System
 
-TC-092 – Show notification for pickup confirmation
-Precondition: User schedules a pickup
-Steps:
-Schedule a new pickup
-Wait for system to process confirmation
-Expected Result: A notification appears with the message like "Pickup confirmed for July 25, 10 AM"
-FR: FR-066
+---
 
-TC-093 – Show notification for new blog post
-Precondition: Admin publishes a new blog post
-Steps:
-Login as user
-Check notification center
-Expected Result: Notification appears: "New blog post: '10 Ways to Reduce Plastic Waste'"
-FR: FR-066
+### ✅ TC-091 – Display notification bell with unread count  
+**Precondition:** User has at least one unread notification  
+**Steps:**  
+1. Login as user  
+2. Look at the top navigation bar  
 
-TC-094 – Show notification for community interaction (likes/comments)
-Precondition: Another user likes or comments on your post
-Steps:
-Create a community post
-Another user likes/comments on it
-Expected Result: Notification says: "Alex liked your post" or "Sami commented: Great tip!"
-FR: FR-066
+**Expected Result:**  
+Notification bell icon displays total unread count (e.g., 🔔 3)  
 
-TC-095 – Show notification for achievement unlocked
-Precondition: User completes a milestone (e.g., 10 pickups)
-Steps:
-Trigger an achievement by completing the requirement
-Expected Result: Notification appears: "🎉 You unlocked the ‘10 Pickups Completed’ badge!"
-FR: FR-066
+**Requirement ID:** FR-065  
 
-TC-096 – Mark notifications as read
-Precondition: User has at least one unread notification
-Steps:
-Open notification dropdown or panel
-Click “Mark as read” on one or all notifications
-Expected Result: Notification icon count decreases or resets to 0; read state persists on refresh
-FR: FR-067
+---
 
-TC-097 – View notification history
-Steps:
-Click on notification bell
-Click “View All” or navigate to /notifications
-Expected Result: List of all past notifications is displayed, including read/unread status and timestamps
-FR: FR-068
+### ✅ TC-092 – Show notification for pickup confirmation  
+**Precondition:** User schedules a pickup  
+**Steps:**  
+1. Schedule a new pickup  
+2. Wait for system to process confirmation  
 
-🧩 GitHub Projects Suggestions
-To integrate into GitHub Projects (Kanban):
-Columns: To Do, In Progress, Passed, Failed
-Labels:
-feature:notifications
-type:test-case
-priority:medium
-ui:dashboard
+**Expected Result:**  
+A notification appears with the message like "Pickup confirmed for July 25, 10 AM"  
+
+**Requirement ID:** FR-066  
+
+---
+
+### ✅ TC-093 – Show notification for new blog post  
+**Precondition:** Admin publishes a new blog post  
+**Steps:**  
+1. Login as user  
+2. Check notification center  
+
+**Expected Result:**  
+Notification appears: "New blog post: '10 Ways to Reduce Plastic Waste'"  
+
+**Requirement ID:** FR-066  
+
+---
+
+### ✅ TC-094 – Show notification for community interaction (likes/comments)  
+**Precondition:** Another user likes or comments on your post  
+**Steps:**  
+1. Create a community post  
+2. Another user likes/comments on it  
+
+**Expected Result:**  
+Notification says: "Alex liked your post" or "Sami commented: Great tip!"  
+
+**Requirement ID:** FR-066  
+
+---
+
+### ✅ TC-095 – Show notification for achievement unlocked  
+**Precondition:** User completes a milestone (e.g., 10 pickups)  
+**Steps:**  
+1. Trigger an achievement by completing the requirement  
+
+**Expected Result:**  
+Notification appears: "🎉 You unlocked the ‘10 Pickups Completed’ badge!"  
+
+**Requirement ID:** FR-066  
+
+---
+
+### ✅ TC-096 – Mark notifications as read  
+**Precondition:** User has at least one unread notification  
+**Steps:**  
+1. Open notification dropdown or panel  
+2. Click “Mark as read” on one or all notifications  
+
+**Expected Result:**  
+Notification icon count decreases or resets to 0; read state persists on refresh  
+
+**Requirement ID:** FR-067  
+
+---
+
+### ✅ TC-097 – View notification history  
+**Steps:**  
+1. Click on notification bell  
+2. Click “View All” or navigate to `/notifications`  
+
+**Expected Result:**  
+List of all past notifications is displayed, including read/unread status and timestamps  
+
+**Requirement ID:** FR-068  
+
+---
+
+## 🧩 GitHub Projects Suggestions  
+To integrate into GitHub Projects (Kanban):  
+- **Columns:** To Do, In Progress, Passed, Failed  
+- **Labels:**  
+  - `feature:notifications`  
+  - `type:test-case`  
+  - `priority:medium`  
+  - `ui:dashboard`
 
 
 Here are detailed, professional-grade test cases for your User Interface Requirements (📱 FR-069 to FR-077), designed for integration into a QA process, GitHub Projects, or issue tracking systems.
