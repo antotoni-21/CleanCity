@@ -1,6 +1,6 @@
 # 🤖 Automated Test Scripts
 
-Generated on **2025-07-25**
+**2025-07-25**
 
 This document contains automated test scripts based on the system functional requirements.
 
