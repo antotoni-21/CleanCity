@@ -1436,306 +1436,421 @@ Dangerous or disallowed HTML is stripped, escaped, or safely rendered
 **Assignees:** QA Engineer, Security Analyst, Frontend Dev  
 
 
+# 🚀 12. Performance & Compatibility Test Cases
 
-✅ Test Case Format
-| TC ID | Title | Precondition | Test Steps | Expected Result | FR ID |
+Detailed and QA-ready test cases for system responsiveness and cross-browser support. Suitable for use in GitHub Projects, test management tools, or Excel/Sheets.
 
-🚀 12.1 Response Time
+---
 
-TC-116 – Page loads within 3 seconds on standard connection
-Precondition: User has stable internet (~10 Mbps); browser cache is cleared
-Steps:
-Open homepage and key feature pages (e.g., Dashboard, Pickup Scheduling)
-Use browser DevTools → Performance tab or Lighthouse
-Expected Result: Full page loads in ≤ 3 seconds
-FR: FR-084
+## ✅ Test Case Format
 
-TC-117 – UI responds to interactions within 1 second
-Precondition: User is logged in
-Steps:
-Click buttons, open modals, toggle menus, submit short forms
-Use performance profiler to measure interaction delay
-Expected Result: Feedback is visible (e.g., animation, state change) within ≤ 1 second
-FR: FR-085
+| TC ID  | Title                                   | Precondition                                              | Test Steps                                                                                           | Expected Result                                                                                 | FR ID     |
+|--------|-----------------------------------------|------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|-----------|
 
-🧪 Recommended Tools:
-Chrome DevTools → Performance tab
-Lighthouse (audit → performance)
-WebPageTest
-GTMetrix
-Real-user testing on mid-range hardware
+---
 
-🧭 12.2 Browser Compatibility
+## 🚀 12.1 Response Time
 
-TC-118 – Application works on Google Chrome (latest 2 versions)
-Precondition: Install Chrome latest and previous version
-Steps:
-Access all major pages and perform typical actions (login, submit form, schedule pickup)
-Expected Result: No visual bugs, layout issues, or JS errors
-FR: FR-086
+### ✅ TC-116 – Page loads within 3 seconds on standard connection  
+**Precondition:** User has stable internet (~10 Mbps); browser cache is cleared  
+**Steps:**  
+1. Open homepage and key feature pages (e.g., Dashboard, Pickup Scheduling)  
+2. Use browser DevTools → Performance tab or Lighthouse  
+**Expected Result:**  
+Full page loads in ≤ 3 seconds  
+**FR:** FR-084  
 
-TC-119 – Application works on Mozilla Firefox (latest 2 versions)
-Steps:
-Repeat functional and visual testing on Firefox latest and previous
-Expected Result: All features work without compatibility issues
-FR: FR-086
+---
 
-TC-120 – Application works on Safari (latest 2 versions)
-Steps:
-Use Safari on macOS (and iOS optionally)
-Check UI rendering, buttons, forms, and navigation
-Expected Result: Same functionality and visual consistency as on Chrome/Firefox
-FR: FR-086
+### ✅ TC-117 – UI responds to interactions within 1 second  
+**Precondition:** User is logged in  
+**Steps:**  
+1. Click buttons, open modals, toggle menus, submit short forms  
+2. Use performance profiler to measure interaction delay  
+**Expected Result:**  
+Feedback is visible (e.g., animation, state change) within ≤ 1 second  
+**FR:** FR-085  
 
-TC-121 – Application works on Microsoft Edge (latest 2 versions)
-Steps:
-Perform smoke test across the app in Edge
-Expected Result: App behaves identically to Chrome (same engine) with no visual or runtime issues
-FR: FR-086
+---
 
-🧩 GitHub Projects Integration
-Each test case can be logged in GitHub as an Issue or Task with:
-Labels:
-type:test-case
-feature:performance, feature:compatibility
-priority:high
-Milestones:
-MVP → Cross-browser support
-Beta → Performance tuning
-Kanban Columns:
-To Do, Testing, Passed, Failed
+### 🧪 Recommended Tools:
+- Chrome DevTools → Performance tab  
+- Lighthouse (Performance audit)  
+- WebPageTest  
+- GTMetrix  
+- Real-user testing on mid-range devices  
 
+---
 
+## 🧭 12.2 Browser Compatibility
 
-Here are detailed and QA-ready test cases for your 📋 Error Handling Requirements (FR-087 to FR-092), formatted for use in GitHub Projects, GitHub Issues, spreadsheets, or test management tools like TestRail, Zephyr, or Xray.
+### ✅ TC-118 – Application works on Google Chrome (latest 2 versions)  
+**Precondition:** Install Chrome latest and previous version  
+**Steps:**  
+1. Access all major pages  
+2. Perform key actions (login, submit form, schedule pickup)  
+**Expected Result:**  
+No visual bugs, layout issues, or JS errors  
+**FR:** FR-086  
 
-✅ Test Case Format
-| TC ID | Title | Precondition | Test Steps | Expected Result | FR ID |
+---
 
-📋 13.1 User-Friendly Errors
+### ✅ TC-119 – Application works on Mozilla Firefox (latest 2 versions)  
+**Steps:**  
+1. Repeat functional and visual testing on Firefox latest and previous  
+**Expected Result:**  
+All features work without compatibility issues  
+**FR:** FR-086  
 
-TC-122 – Display clear, actionable error messages
-Precondition: User submits a form with invalid inputs (e.g., empty required field or wrong format)
-Steps:
-Navigate to the form (e.g., Registration or Pickup Request)
-Submit the form with missing or invalid fields (e.g., incorrect email format)
-Expected Result: Error messages appear (e.g., "Please enter a valid email address") with field-specific highlights
-FR: FR-087
+---
 
-TC-123 – Provide guidance for common issues
-Precondition: Simulate a common user error (e.g., incorrect login credentials)
-Steps:
-Enter incorrect password 3 times on login
-Expected Result: Message such as “Forgot your password? Click here to reset” appears with a link to help
-FR: FR-088
+### ✅ TC-120 – Application works on Safari (latest 2 versions)  
+**Steps:**  
+1. Use Safari on macOS (and iOS optionally)  
+2. Check UI rendering, buttons, forms, and navigation  
+**Expected Result:**  
+Same functionality and visual consistency as on Chrome/Firefox  
+**FR:** FR-086  
 
-TC-124 – Handle network errors gracefully
-Precondition: Disconnect from the internet during an API call
-Steps:
-Disable network via DevTools or OS
-Try to submit a form or load dashboard
-Expected Result: User sees an appropriate error message (e.g., “Network error: please check your connection”) and the system does not crash
-FR: FR-089
+---
 
-📝 13.2 Form Validation
+### ✅ TC-121 – Application works on Microsoft Edge (latest 2 versions)  
+**Steps:**  
+1. Perform smoke test across the app in Edge  
+**Expected Result:**  
+App behaves identically to Chrome (same engine) with no visual or runtime issues  
+**FR:** FR-086  
 
-TC-125 – Real-time validation on form fields
-Precondition: Form has at least one required field
-Steps:
-Begin typing an invalid email, e.g., user@
-Move to the next field without correcting
-Expected Result: Error appears immediately without submitting the form, e.g., "Invalid email format"
-FR: FR-090
+---
 
-TC-126 – Prevent submission with invalid data
-Precondition: A required form is filled incorrectly
-Steps:
-Leave one required field blank
-Click “Submit”
-Expected Result: Form does not submit, and relevant errors are shown
-FR: FR-091
+## 🧩 GitHub Projects Integration
 
-TC-127 – Highlight validation errors clearly
-Precondition: Form with multiple validation rules
-Steps:
-Enter invalid data in multiple fields
-Click “Submit”
-Expected Result: Errors are visually marked (e.g., red border, tooltips, or under-text) near each affected field
-FR: FR-092
+**Suggested Labels:**  
+- `type:test-case`  
+- `feature:performance`  
+- `feature:compatibility`  
+- `priority:high`  
 
-🧩 GitHub Projects Integration
-You can create a Kanban workflow like this:
-Columns: To Do, In Progress, Testing, Passed, Failed
-Labels:
-type:test-case
-feature:error-handling
-priority:high (for FR-089, FR-091)
-ui:forms, ux:messages
+**Milestones:**  
+- `MVP → Cross-browser support`  
+- `Beta → Performance tuning`  
 
-🔧 Optional Automation Tools
-Form validation: Cypress, Playwright
-Error message detection: Selenium assertions
-Network simulation: Chrome DevTools → Network → Offline
+**Kanban Columns:**  
+- To Do  
+- Testing  
+- Passed  
+- Failed  
 
 
 
-Here are detailed test cases for your 🎯 Business Rules Requirements (Section 14), written in a QA-friendly format and ready to plug into GitHub Projects, a spreadsheet, or any test management system.
+# 📋 13. Error Handling & Form Validation Test Cases
 
-✅ Format
-| TC ID | Title | Precondition | Test Steps | Expected Result | Related FR / Rule |
+Detailed, QA-ready test cases formatted for GitHub Projects, Jira, TestRail, Zephyr, or spreadsheet-based tracking.
 
-🎯 14.1 Pickup Scheduling Rules
+---
 
-TC-128 – Allow scheduling pickups up to 30 days in advance
-Precondition: User is logged in
-Steps:
-Open Pickup Scheduler
-Attempt to select a date 31 days from today
-Expected Result: System should not allow selection beyond 30 days
-Rule: BR-14.1.1
+## ✅ Test Case Format
 
-TC-129 – Disallow scheduling within less than 24 hours
-Precondition: User is logged in
-Steps:
-Open Pickup Scheduler
-Try scheduling for the same day or within next 23 hours
-Expected Result: System shows validation error: “Pickup must be scheduled at least 24 hours in advance”
-Rule: BR-14.1.2
+| TC ID   | Title                                   | Precondition                                                  | Test Steps                                                                                              | Expected Result                                                                                         | FR ID    |
+|---------|-----------------------------------------|---------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|----------|
 
-TC-130 – Prevent more than 3 pickups per user per week
-Precondition: User has already scheduled 3 pickups this week
-Steps:
-Try to schedule a 4th pickup within the same calendar week
-Expected Result: Error: “Maximum 3 pickups allowed per week”
-Rule: BR-14.1.3
+---
 
-TC-131 – Require approval for hazardous waste
-Precondition: User selects "Hazardous" waste type
-Steps:
-Fill in pickup form with hazardous waste
-Submit request
-Expected Result: Request enters "Pending Approval" state; user notified of special handling
-Rule: BR-14.1.4
+## 📋 13.1 User-Friendly Errors
 
-👥 14.2 User Management Rules
+### ✅ TC-122 – Display clear, actionable error messages  
+**Precondition:** User submits a form with invalid inputs (e.g., empty required field or wrong format)  
+**Steps:**  
+1. Navigate to the form (e.g., Registration or Pickup Request)  
+2. Submit the form with missing or invalid fields (e.g., incorrect email format)  
+**Expected Result:**  
+Error messages appear (e.g., "Please enter a valid email address") with field-specific highlights  
+**FR:** FR-087  
 
-TC-132 – Email addresses must be unique
-Precondition: Existing user email already registered
-Steps:
-Try registering with same email
-Expected Result: Error: “Email already in use”
-Rule: BR-14.2.1
+---
 
-TC-133 – Passwords must meet security requirements
-Steps:
-Try registering with weak password (e.g., 12345678)
-Expected Result: Error: “Password must contain at least one uppercase letter, one number, and one special character”
-Rule: BR-14.2.2
+### ✅ TC-123 – Provide guidance for common issues  
+**Precondition:** Simulate a common user error (e.g., incorrect login credentials)  
+**Steps:**  
+1. Enter incorrect password 3 times on login  
+**Expected Result:**  
+Message such as “Forgot your password? Click here to reset” appears with a link to help  
+**FR:** FR-088  
 
-TC-134 – Archive inactive accounts after 6 months
-Precondition: User hasn’t logged in for 6+ months
-Steps:
-System runs scheduled job
-Expected Result: Account is marked inactive and archived (not deleted)
-Rule: BR-14.2.3
+---
 
-TC-135 – Prevent deletion of admin accounts
-Precondition: Logged in as Admin
-Steps:
-Try to delete an admin account from user management panel
-Expected Result: Action denied, message: “Admin accounts cannot be deleted”
-Rule: BR-14.2.4
+### ✅ TC-124 – Handle network errors gracefully  
+**Precondition:** Disconnect from the internet during an API call  
+**Steps:**  
+1. Disable network via DevTools or OS  
+2. Try to submit a form or load dashboard  
+**Expected Result:**  
+User sees an appropriate error message (e.g., “Network error: please check your connection”) and the system does not crash  
+**FR:** FR-089  
 
-📝 14.3 Content Rules
+---
 
-TC-136 – Block offensive community posts
-Steps:
-Attempt to post inappropriate content (test with known flagged words or profanity)
-Expected Result: Post is blocked or flagged for moderation
-Rule: BR-14.3.1
+## 📝 13.2 Form Validation
 
-TC-137 – Blog comments require moderation
-Steps:
-Submit comment on blog
-Log in as admin/moderator
-Expected Result: Comment is not public until approved
-Rule: BR-14.3.2
+### ✅ TC-125 – Real-time validation on form fields  
+**Precondition:** Form has at least one required field  
+**Steps:**  
+1. Begin typing an invalid email, e.g., `user@`  
+2. Move to the next field without correcting  
+**Expected Result:**  
+Error appears immediately without submitting the form, e.g., "Invalid email format"  
+**FR:** FR-090  
 
-TC-138 – Users can report inappropriate content
-Steps:
-View a community post
-Click “Report”
-Expected Result: Post is flagged, notification sent to moderators
-Rule: BR-14.3.3
+---
 
-TC-139 – Archive content older than 1 year
-Precondition: Community post or blog post is 12+ months old
-Steps:
-Wait for scheduled cleanup job
-Expected Result: Content is moved to "Archived" state and not shown in main feeds
-Rule: BR-14.3.4
+### ✅ TC-126 – Prevent submission with invalid data  
+**Precondition:** A required form is filled incorrectly  
+**Steps:**  
+1. Leave one required field blank  
+2. Click “Submit”  
+**Expected Result:**  
+Form does not submit, and relevant errors are shown  
+**FR:** FR-091  
 
-🧩 GitHub Projects Integration
+---
+
+### ✅ TC-127 – Highlight validation errors clearly  
+**Precondition:** Form with multiple validation rules  
+**Steps:**  
+1. Enter invalid data in multiple fields  
+2. Click “Submit”  
+**Expected Result:**  
+Errors are visually marked (e.g., red border, tooltips, or under-text) near each affected field  
+**FR:** FR-092  
+
+---
+
+## 🧩 GitHub Projects Integration
+
+**Suggested Columns:**  
+- To Do  
+- In Progress  
+- Testing  
+- Passed  
+- Failed  
+
+**Suggested Labels:**  
+- `type:test-case`  
+- `feature:error-handling`  
+- `priority:high` (for FR-089, FR-091)  
+- `ui:forms`, `ux:messages`  
+
+---
+
+## 🔧 Optional Automation Tools
+
+- **Form validation:** Cypress, Playwright  
+- **Error message detection:** Selenium assertions  
+- **Network simulation:** Chrome DevTools → Network → Offline  
+
+
+
+# ✅ Test Case Format
+
+| TC ID   | Title                                      | Precondition                              | Test Steps                                                                                     | Expected Result                                                                                          | Related FR / Rule |
+|---------|--------------------------------------------|-------------------------------------------|----------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|-------------------|
+
+---
+
+## 🎯 14.1 Pickup Scheduling Rules
+
+### TC-128 – Allow scheduling pickups up to 30 days in advance
+- **Precondition:** User is logged in  
+- **Steps:**  
+  1. Open Pickup Scheduler  
+  2. Attempt to select a date 31 days from today  
+- **Expected Result:** System should not allow selection beyond 30 days  
+- **Rule:** BR-14.1.1
+
+---
+
+### TC-129 – Disallow scheduling within less than 24 hours
+- **Precondition:** User is logged in  
+- **Steps:**  
+  1. Open Pickup Scheduler  
+  2. Try scheduling for the same day or within next 23 hours  
+- **Expected Result:** System shows validation error: “Pickup must be scheduled at least 24 hours in advance”  
+- **Rule:** BR-14.1.2
+
+---
+
+### TC-130 – Prevent more than 3 pickups per user per week
+- **Precondition:** User has already scheduled 3 pickups this week  
+- **Steps:**  
+  1. Try to schedule a 4th pickup within the same calendar week  
+- **Expected Result:** Error: “Maximum 3 pickups allowed per week”  
+- **Rule:** BR-14.1.3
+
+---
+
+### TC-131 – Require approval for hazardous waste
+- **Precondition:** User selects "Hazardous" waste type  
+- **Steps:**  
+  1. Fill in pickup form with hazardous waste  
+  2. Submit request  
+- **Expected Result:** Request enters "Pending Approval" state; user notified of special handling  
+- **Rule:** BR-14.1.4
+
+---
+
+## 👥 14.2 User Management Rules
+
+### TC-132 – Email addresses must be unique
+- **Precondition:** Existing user email already registered  
+- **Steps:**  
+  1. Try registering with same email  
+- **Expected Result:** Error: “Email already in use”  
+- **Rule:** BR-14.2.1
+
+---
+
+### TC-133 – Passwords must meet security requirements
+- **Steps:**  
+  1. Try registering with weak password (e.g., 12345678)  
+- **Expected Result:** Error: “Password must contain at least one uppercase letter, one number, and one special character”  
+- **Rule:** BR-14.2.2
+
+---
+
+### TC-134 – Archive inactive accounts after 6 months
+- **Precondition:** User hasn’t logged in for 6+ months  
+- **Steps:**  
+  1. System runs scheduled job  
+- **Expected Result:** Account is marked inactive and archived (not deleted)  
+- **Rule:** BR-14.2.3
+
+---
+
+### TC-135 – Prevent deletion of admin accounts
+- **Precondition:** Logged in as Admin  
+- **Steps:**  
+  1. Try to delete an admin account from user management panel  
+- **Expected Result:** Action denied, message: “Admin accounts cannot be deleted”  
+- **Rule:** BR-14.2.4
+
+---
+
+## 📝 14.3 Content Rules
+
+### TC-136 – Block offensive community posts
+- **Steps:**  
+  1. Attempt to post inappropriate content (test with known flagged words or profanity)  
+- **Expected Result:** Post is blocked or flagged for moderation  
+- **Rule:** BR-14.3.1
+
+---
+
+### TC-137 – Blog comments require moderation
+- **Steps:**  
+  1. Submit comment on blog  
+  2. Log in as admin/moderator  
+- **Expected Result:** Comment is not public until approved  
+- **Rule:** BR-14.3.2
+
+---
+
+### TC-138 – Users can report inappropriate content
+- **Steps:**  
+  1. View a community post  
+  2. Click “Report”  
+- **Expected Result:** Post is flagged, notification sent to moderators  
+- **Rule:** BR-14.3.3
+
+---
+
+### TC-139 – Archive content older than 1 year
+- **Precondition:** Community post or blog post is 12+ months old  
+- **Steps:**  
+  1. Wait for scheduled cleanup job  
+- **Expected Result:** Content is moved to "Archived" state and not shown in main feeds  
+- **Rule:** BR-14.3.4
+
+---
+
+## 🧩 GitHub Projects Integration
+
 Each test case can be created as a GitHub Issue with:
-Labels: test-case, business-rules, content, scheduling, user-management
-Milestone: "Business Logic Testing"
-Kanban Columns: Backlog, In Testing, Tested, Failed, Rework
+
+- **Labels:** `test-case`, `business-rules`, `content`, `scheduling`, `user-management`  
+- **Milestone:** `"Business Logic Testing"`  
+- **Kanban Columns:** `Backlog`, `In Testing`, `Tested`, `Failed`, `Rework`
 
 
 
-Here are detailed test cases for the 📞 15. Support and Maintenance Requirements (FR-093 to FR-097), designed for QA teams and formatted for GitHub Projects, spreadsheets, or test case management tools.
+# ✅ Test Case Format
 
-✅ Format
-| TC ID | Title | Precondition | Test Steps | Expected Result | Related FR |
+| TC ID  | Title                              | Precondition                                                                  | Test Steps                                                                                                   | Expected Result                                                                                      | Related FR |
+|--------|------------------------------------|--------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|-------------|
 
-📞 15.1 Help System
+## 📞 15.1 Help System
 
-TC-140 – Display contextual help/tooltips
-Precondition: User is logged in and on a form/page with help icons/tooltips enabled
-Steps:
-Hover over or click a help icon (e.g., ❓ or ℹ️) near an input field or button
-Expected Result: Tooltip appears with relevant information or guidance
-FR: FR-093
+### TC-140 – Display contextual help/tooltips
+- **Precondition:** User is logged in and on a form/page with help icons/tooltips enabled  
+- **Steps:**  
+  1. Hover over or click a help icon (e.g., ❓ or ℹ️) near an input field or button  
+- **Expected Result:** Tooltip appears with relevant information or guidance  
+- **Related FR:** FR-093
 
-TC-141 – Display FAQ section
-Precondition: User has access to the help/support section
-Steps:
-Navigate to Help → FAQ
-Expected Result: FAQ section loads with common questions and answers
-FR: FR-094
+---
 
-TC-142 – Display contact information for support
-Steps:
-Navigate to Help or Contact Support section
-Expected Result: Email, phone number, or contact form is clearly visible
-FR: FR-095
+### TC-141 – Display FAQ section
+- **Precondition:** User has access to the help/support section  
+- **Steps:**  
+  1. Navigate to Help → FAQ  
+- **Expected Result:** FAQ section loads with common questions and answers  
+- **Related FR:** FR-094
 
-🛠️ 15.2 System Monitoring
+---
 
-TC-143 – Log user activity for debugging
-Precondition: Admin or developer has access to logs
-Steps:
-Perform typical user actions (e.g., login, schedule pickup, cancel request)
-Check activity log output (via console, server log, or monitoring tool)
-Expected Result: Each user action is logged with timestamp, user ID, and activity type
-FR: FR-096
+### TC-142 – Display contact information for support
+- **Steps:**  
+  1. Navigate to Help or Contact Support section  
+- **Expected Result:** Email, phone number, or contact form is clearly visible  
+- **Related FR:** FR-095
 
-TC-144 – Log and report system errors
-Precondition: Trigger an error (e.g., force a 500 internal server error)
-Steps:
-Simulate a failure (e.g., API request to an invalid endpoint)
-Check backend/server log or error monitoring tool
-Expected Result: Error is logged with details: error code, stack trace, user session ID
-FR: FR-097
+---
 
-🧩 GitHub Projects Integration
-You can create GitHub Issues for each test case with:
-Labels: test-case, support, monitoring, type:manual
-Milestone: “Support & Logging Validation”
-Kanban Columns: To Do, In Testing, Verified, Re-test, Blocked
+## 🛠️ 15.2 System Monitoring
 
-🔧 Optional Automation Suggestions
-Tooltips and FAQs: Can be verified with Cypress UI tests
-Logging: Validate with log monitoring tools (e.g., LogRocket, Datadog, or console logs for dev)
+### TC-143 – Log user activity for debugging
+- **Precondition:** Admin or developer has access to logs  
+- **Steps:**  
+  1. Perform typical user actions (e.g., login, schedule pickup, cancel request)  
+  2. Check activity log output (via console, server log, or monitoring tool)  
+- **Expected Result:** Each user action is logged with timestamp, user ID, and activity type  
+- **Related FR:** FR-096
+
+---
+
+### TC-144 – Log and report system errors
+- **Precondition:** Trigger an error (e.g., force a 500 internal server error)  
+- **Steps:**  
+  1. Simulate a failure (e.g., API request to an invalid endpoint)  
+  2. Check backend/server log or error monitoring tool  
+- **Expected Result:** Error is logged with details: error code, stack trace, user session ID  
+- **Related FR:** FR-097
+
+---
+
+## 🧩 GitHub Projects Integration
+
+Each test case can be created as a GitHub Issue with:
+
+- **Labels:** `test-case`, `support`, `monitoring`, `type:manual`  
+- **Milestone:** `"Support & Logging Validation"`  
+- **Kanban Columns:** `To Do`, `In Testing`, `Verified`, `Re-test`, `Blocked`
+
+---
+
+## 🔧 Optional Automation Suggestions
+
+- **Tooltips and FAQs:** Can be verified with Cypress UI tests  
+- **Logging:** Validate with log monitoring tools (e.g., LogRocket, Datadog, or console logs for dev)
+
 
 
