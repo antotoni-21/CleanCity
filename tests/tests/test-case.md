@@ -132,11 +132,6 @@ Account is created, user is assigned "User" role, and redirected or shown succes
 - **FR:** FR-003, FR-010
 
 
-
-
-✅ Test Case Table Format
-
-
 ♻️ 4.1 Pickup Scheduling
 TC-016 – Schedule pickup with valid information
 Precondition: User is logged in
