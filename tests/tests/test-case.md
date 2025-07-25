@@ -328,151 +328,227 @@ Feedback is saved and associated with the request
 **Requirement ID:** FR-022  
 
 
+## 📊 5.1 User Dashboard
 
-📊 5.1 User Dashboard
-TC-033 – Display personalized user dashboard
-Precondition: User is logged in with pickup history
-Steps:
-Log in and navigate to /dashboard
-Expected Result:
-Recent pickups section is visible
-Upcoming scheduled pickups are listed
-Environmental stats and achievement badges are shown
-Quick action buttons (e.g., Schedule Pickup, View History) are displayed
-FR: FR-023
+---
 
-TC-034 – Show recent pickup requests
-Steps:
-Open dashboard
-Expected Result:
-Last 3–5 completed pickup requests appear under “Recent Activity”
-FR: FR-023
+### ✅ TC-033 – Display personalized user dashboard  
+**Precondition:** User is logged in with pickup history  
+**Steps:**  
+1. Log in and navigate to `/dashboard`  
 
-TC-035 – Display upcoming scheduled pickups
-Precondition: User has future scheduled pickups
-Steps:
-Open dashboard
-Expected Result:
-Pickup date/time, type, and status shown in “Upcoming Pickups”
-FR: FR-023
+**Expected Result:**  
+- Recent pickups section is visible  
+- Upcoming scheduled pickups are listed  
+- Environmental stats and achievement badges are shown  
+- Quick action buttons (e.g., Schedule Pickup, View History) are displayed  
 
-TC-036 – Show environmental impact stats
-Steps:
-View environmental section on dashboard
-Expected Result:
-Shows accurate metrics: Total waste diverted, CO2 saved, Trees saved
-FR: FR-024
+**Requirement ID:** FR-023  
 
-TC-037 – Environmental metrics calculation accuracy
-Steps:
-Compare metrics against backend or database calculations
-Expected Result:
-Displayed stats correctly match user’s actual pickup totals
-FR: FR-024
+---
 
-TC-038 – Display quick action buttons
-Steps:
-View dashboard buttons
-Expected Result:
-"Schedule Pickup", "Track Request", "Download Report", etc., are shown and clickable
-FR: FR-023
+### ✅ TC-034 – Show recent pickup requests  
+**Steps:**  
+1. Open dashboard  
 
-📈 5.2 Analytics & Reports
-TC-039 – Display charts and graphs for user data
-Steps:
-Go to “Analytics” tab
-Expected Result:
-Charts show: waste type breakdown, pickup frequency, CO2 impact over time
-FR: FR-025
+**Expected Result:**  
+Last 3–5 completed pickup requests appear under “Recent Activity”  
 
-TC-040 – Community leaderboard shows impact rankings
-Steps:
-Open “Community” or “Leaderboard” tab
-Expected Result:
-List of top users sorted by environmental metrics (e.g., waste diverted)
-User’s own rank is highlighted
-FR: FR-026
+**Requirement ID:** FR-023  
 
-TC-041 – Show monthly and yearly waste trends
-Steps:
-View analytics filters
-Select month/year filter
-Expected Result:
-Graph updates to reflect selected timeframe
-Trends show upward/downward waste activity
-FR: FR-027
+---
 
-TC-042 – Export user data to CSV
-Steps:
-Click "Export" on dashboard or profile
-Expected Result:
-Download starts for a .csv file with user's pickup history and impact stats
-FR: FR-028
+### ✅ TC-035 – Display upcoming scheduled pickups  
+**Precondition:** User has future scheduled pickups  
+**Steps:**  
+1. Open dashboard  
 
-TC-043 – Validate exported CSV content
-Steps:
-Open exported CSV
-Expected Result:
-Data includes pickup dates, waste types, quantity, impact values
-FR: FR-028
+**Expected Result:**  
+Pickup date/time, type, and status shown in “Upcoming Pickups”  
 
-🏅 5.3 Gamification
-TC-044 – Award badge for first pickup
-Precondition: User schedules first pickup
-Steps:
-Complete first pickup
-Open dashboard
-Expected Result:
-"First Pickup" badge is awarded and displayed
-FR: FR-029
+**Requirement ID:** FR-023  
 
-TC-045 – Award badge for 10 completed pickups
-Precondition: User completes 10 pickups
-Steps:
-Open dashboard
-Expected Result:
-"10 Pickups Completed" badge is visible
-FR: FR-029
+---
 
-TC-046 – Award badge for perfect recycling score
-Precondition: User has multiple pickups marked as “perfect recycling”
-Steps:
-Review badges on dashboard
-Expected Result:
-"Perfect Recycler" badge is awarded
-FR: FR-029
+### ✅ TC-036 – Show environmental impact stats  
+**Steps:**  
+1. View environmental section on dashboard  
 
-TC-047 – Award badge for community contribution
-Precondition: User engages with community features (e.g., referrals, posts)
-Steps:
-Use community features
-Return to dashboard
-Expected Result:
-"Community Contributor" badge is shown
-FR: FR-029
+**Expected Result:**  
+Shows accurate metrics: Total waste diverted, CO₂ saved, Trees saved  
 
-TC-048 – Track and display user points and levels
-Steps:
-View profile or dashboard gamification section
-Expected Result:
-Total points and level are displayed
-Activity log shows point history
-FR: FR-030
+**Requirement ID:** FR-024  
 
-TC-049 – Level up when threshold reached
-Precondition: User reaches level-up point threshold
-Steps:
-Complete an action that pushes points past the threshold
-Expected Result:
-User levels up
-Notification or animation shown
-FR: FR-030
+---
 
+### ✅ TC-037 – Environmental metrics calculation accuracy  
+**Steps:**  
+1. Compare metrics against backend or database calculations  
 
-Here are well-structured test cases based on your Content Management Requirements (Blog System, Awareness Section, Community Feed – FR-036 to FR-044). These are ready to be added to your GitHub Projects Kanban board or exported to Issues.
+**Expected Result:**  
+Displayed stats correctly match user’s actual pickup totals  
 
-✅ Test Case Format
-| TC ID | Title | Precondition | Steps | Expected Result | FR ID |
+**Requirement ID:** FR-024  
+
+---
+
+### ✅ TC-038 – Display quick action buttons  
+**Steps:**  
+1. View dashboard buttons  
+
+**Expected Result:**  
+"Schedule Pickup", "Track Request", "Download Report", etc., are shown and clickable  
+
+**Requirement ID:** FR-023  
+
+---
+
+## 📈 5.2 Analytics & Reports
+
+---
+
+### ✅ TC-039 – Display charts and graphs for user data  
+**Steps:**  
+1. Go to “Analytics” tab  
+
+**Expected Result:**  
+Charts show:  
+- Waste type breakdown  
+- Pickup frequency  
+- CO₂ impact over time  
+
+**Requirement ID:** FR-025  
+
+---
+
+### ✅ TC-040 – Community leaderboard shows impact rankings  
+**Steps:**  
+1. Open “Community” or “Leaderboard” tab  
+
+**Expected Result:**  
+- List of top users sorted by environmental metrics (e.g., waste diverted)  
+- User’s own rank is highlighted  
+
+**Requirement ID:** FR-026  
+
+---
+
+### ✅ TC-041 – Show monthly and yearly waste trends  
+**Steps:**  
+1. View analytics filters  
+2. Select month/year filter  
+
+**Expected Result:**  
+- Graph updates to reflect selected timeframe  
+- Trends show upward/downward waste activity  
+
+**Requirement ID:** FR-027  
+
+---
+
+### ✅ TC-042 – Export user data to CSV  
+**Steps:**  
+1. Click "Export" on dashboard or profile  
+
+**Expected Result:**  
+Download starts for a `.csv` file with user's pickup history and impact stats  
+
+**Requirement ID:** FR-028  
+
+---
+
+### ✅ TC-043 – Validate exported CSV content  
+**Steps:**  
+1. Open exported CSV  
+
+**Expected Result:**  
+Data includes:  
+- Pickup dates  
+- Waste types  
+- Quantity  
+- Impact values  
+
+**Requirement ID:** FR-028  
+
+---
+
+## 🏅 5.3 Gamification
+
+---
+
+### 🏆 TC-044 – Award badge for first pickup  
+**Precondition:** User schedules first pickup  
+**Steps:**  
+1. Complete first pickup  
+2. Open dashboard  
+
+**Expected Result:**  
+"First Pickup" badge is awarded and displayed  
+
+**Requirement ID:** FR-029  
+
+---
+
+### 🏆 TC-045 – Award badge for 10 completed pickups  
+**Precondition:** User completes 10 pickups  
+**Steps:**  
+1. Open dashboard  
+
+**Expected Result:**  
+"10 Pickups Completed" badge is visible  
+
+**Requirement ID:** FR-029  
+
+---
+
+### 🏆 TC-046 – Award badge for perfect recycling score  
+**Precondition:** User has multiple pickups marked as “perfect recycling”  
+**Steps:**  
+1. Review badges on dashboard  
+
+**Expected Result:**  
+"Perfect Recycler" badge is awarded  
+
+**Requirement ID:** FR-029  
+
+---
+
+### 🏆 TC-047 – Award badge for community contribution  
+**Precondition:** User engages with community features (e.g., referrals, posts)  
+**Steps:**  
+1. Use community features  
+2. Return to dashboard  
+
+**Expected Result:**  
+"Community Contributor" badge is shown  
+
+**Requirement ID:** FR-029  
+
+---
+
+### 🏆 TC-048 – Track and display user points and levels  
+**Steps:**  
+1. View profile or dashboard gamification section  
+
+**Expected Result:**  
+- Total points and level are displayed  
+- Activity log shows point history  
+
+**Requirement ID:** FR-030  
+
+---
+
+### 🏆 TC-049 – Level up when threshold reached  
+**Precondition:** User reaches level-up point threshold  
+**Steps:**  
+1. Complete an action that pushes points past the threshold  
+
+**Expected Result:**  
+- User levels up  
+- Notification or animation shown  
+
+**Requirement ID:** FR-030  
+
 
 📝 6.1 Blog System
 TC-050 – Display list of blog articles
