@@ -186,77 +186,147 @@ Account is created, user is assigned "User" role, and redirected or shown succes
 **Steps:**  
 1. Open scheduling form  
 **Expected Result:** Address field is pre-populated with user’s profile address  
-**FR:** FR-012  
+**FR:** FR-012
 
-TC-022 – View available time slots
-Steps: Select a valid future date
-Expected Result: List of available time slots is displayed
-FR: FR-014
+## 🗓️ 4.1 Additional Pickup Scheduling
 
-TC-023 – Prevent multiple pickups for same date
-Precondition: One pickup is already scheduled for the selected date
-Steps: Try to book another pickup for the same date
-Expected Result: Error: “You already have a pickup scheduled for this date”
-FR: FR-015
+---
 
-📋 4.2 Request Management
-TC-024 – View request history
-Steps: Navigate to “My Requests”
-Expected Result: List of past and pending pickup requests is shown with status and details
-FR: FR-016
+### ✅ TC-022 – View available time slots  
+**Steps:**  
+1. Select a valid future date  
 
-TC-025 – Cancel a pending pickup
-Precondition: Pickup request status is “Pending”
-Steps: Click “Cancel” on a request
-Expected Result: Request status changes to “Cancelled”
-FR: FR-017
+**Expected Result:**  
+List of available time slots is displayed  
 
-TC-026 – Try to cancel completed pickup
-Precondition: Pickup is already marked as “Completed”
-Steps: Attempt to cancel
-Expected Result: Action blocked, message: “Only pending pickups can be cancelled”
-FR: FR-017
+**Requirement ID:** FR-014  
 
-TC-027 – Modify pickup before 24 hours
-Precondition: Pickup is scheduled more than 24 hours from now
-Steps: Edit quantity and waste type
-Expected Result: Update is saved successfully
-FR: FR-018
+---
 
-TC-028 – Modify pickup within 24-hour window
-Precondition: Pickup is scheduled in less than 24 hours
-Steps: Try to edit pickup
-Expected Result: Edit option disabled or warning shown
-FR: FR-018
+### ❌ TC-023 – Prevent multiple pickups for same date  
+**Precondition:** One pickup is already scheduled for the selected date  
+**Steps:**  
+1. Try to book another pickup for the same date  
 
-TC-029 – Display request status
-Steps: View requests in history
-Expected Result: Each request shows status: Pending, Confirmed, Completed, or Cancelled
-FR: FR-019
+**Expected Result:**  
+Error: “You already have a pickup scheduled for this date”  
 
-🚚 4.3 Request Tracking
-TC-030 – Real-time status updates
-Precondition: Pickup request is active
-Steps: Refresh dashboard or open tracking view
-Expected Result: Status updates automatically without full reload
-FR: FR-020
+**Requirement ID:** FR-015  
 
-TC-031 – Receive notification for status changes
-Steps: Schedule a pickup and wait for status to change
-Expected Result: User receives in-app or email notification
-FR: FR-021
+---
 
-TC-032 – Leave feedback after pickup
-Precondition: Pickup status is “Completed”
-Steps: Open the completed request and submit feedback (e.g., 4-star rating, comment)
-Expected Result: Feedback is saved and associated with the request
-FR: FR-022
+## 📋 4.2 Request Management
 
+---
 
+### ✅ TC-024 – View request history  
+**Steps:**  
+1. Navigate to “My Requests”  
 
-Here are detailed, high-quality test cases for the Dashboard & Analytics Requirements (FR-023 to FR-030), organized into categories and formatted for use in manual testing, automation, or integration into a GitHub Projects board (as Kanban-style cards).
+**Expected Result:**  
+List of past and pending pickup requests is shown with status and details  
 
-✅ Test Case Format
+**Requirement ID:** FR-016  
+
+---
+
+### ✅ TC-025 – Cancel a pending pickup  
+**Precondition:** Pickup request status is “Pending”  
+**Steps:**  
+1. Click “Cancel” on a request  
+
+**Expected Result:**  
+Request status changes to “Cancelled”  
+
+**Requirement ID:** FR-017  
+
+---
+
+### ❌ TC-026 – Try to cancel completed pickup  
+**Precondition:** Pickup is already marked as “Completed”  
+**Steps:**  
+1. Attempt to cancel  
+
+**Expected Result:**  
+Action blocked, message: “Only pending pickups can be cancelled”  
+
+**Requirement ID:** FR-017  
+
+---
+
+### ✅ TC-027 – Modify pickup before 24 hours  
+**Precondition:** Pickup is scheduled more than 24 hours from now  
+**Steps:**  
+1. Edit quantity and waste type  
+
+**Expected Result:**  
+Update is saved successfully  
+
+**Requirement ID:** FR-018  
+
+---
+
+### ❌ TC-028 – Modify pickup within 24-hour window  
+**Precondition:** Pickup is scheduled in less than 24 hours  
+**Steps:**  
+1. Try to edit pickup  
+
+**Expected Result:**  
+Edit option disabled or warning shown  
+
+**Requirement ID:** FR-018  
+
+---
+
+### ✅ TC-029 – Display request status  
+**Steps:**  
+1. View requests in history  
+
+**Expected Result:**  
+Each request shows status: Pending, Confirmed, Completed, or Cancelled  
+
+**Requirement ID:** FR-019  
+
+---
+
+## 🚚 4.3 Request Tracking
+
+---
+
+### ✅ TC-030 – Real-time status updates  
+**Precondition:** Pickup request is active  
+**Steps:**  
+1. Refresh dashboard or open tracking view  
+
+**Expected Result:**  
+Status updates automatically without full reload  
+
+**Requirement ID:** FR-020  
+
+---
+
+### ✅ TC-031 – Receive notification for status changes  
+**Steps:**  
+1. Schedule a pickup and wait for status to change  
+
+**Expected Result:**  
+User receives in-app or email notification  
+
+**Requirement ID:** FR-021  
+
+---
+
+### ✅ TC-032 – Leave feedback after pickup  
+**Precondition:** Pickup status is “Completed”  
+**Steps:**  
+1. Open the completed request  
+2. Submit feedback (e.g., 4-star rating, comment)  
+
+**Expected Result:**  
+Feedback is saved and associated with the request  
+
+**Requirement ID:** FR-022  
+
 
 
 📊 5.1 User Dashboard
